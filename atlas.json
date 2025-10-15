@@ -18,13 +18,13 @@
       "id": "welcome",
       "name": { "en": "Welcome", "gd": "Fàilte" },
       "title": null,
-      "source": { "osmTags": "always-false" },
+      "source": { "osmTags": "id=no_such_tag" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "tagRenderings": [
         {
           "render": {
-            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more. Your contributions help build a shared resource for everyone.</p><p><b>How to contribute:</b><br>1. Zoom to a place you know.<br>2. Click a feature or add a new one.<br>3. Answer the short question.<br>4. Save your edit — it will appear on the map for others.</p><p>Thank you for helping grow this open, collaborative atlas.</p>",
-            "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà-chànanach seo gad thàladh gus cruthan-tìre, eachdraidh agus coimhearsnachdan na h-Alba a rannsachadh agus a neartachadh. Briog air a’ mhapa gus mion-fhiosrachadh a chur ris mu làraichean eachdraidheil, feartan nàdair, clach-eòlas agus barrachd. Tha na tabhartasan agad a’ cuideachadh gus goireas co-roinnte a thogail airson a h-uile duine.</p><p><b>Mar a chuireas tu ri chèile:</b><br>1. Sùm gu àite a tha thu eòlach air.<br>2. Briog air feart no cuir fear ùr ris.<br>3. Freagair a’ cheist ghoirid.<br>4. Sàbhail an deasachadh agad — nochdaidh e air a’ mhapa do chàch.</p><p>Mòran taing airson do chuideachadh le bhith a’ fàs an atlas cho-obrachail seo.</p>"
+            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more. Your contributions help build a shared resource for everyone.</p><p><b>How to contribute:</b><br>1. Zoom to a place you know.<br>2. Click a feature or add a new one.<br>3. Answer the short question.<br>4. Save your edit — it will appear on the map for others.</p><p>Need more help? <a href='https://glenachulish.github.io/atlas/contribute.html' target='_blank'>Read the full instructions here</a>.</p><p>Thank you for helping grow this open, collaborative atlas.</p>",
+            "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà-chànanach seo gad thàladh gus cruthan-tìre, eachdraidh agus coimhearsnachdan na h-Alba a rannsachadh agus a neartachadh. Briog air a’ mhapa gus mion-fhiosrachadh a chur ris mu làraichean eachdraidheil, feartan nàdair, clach-eòlas agus barrachd. Tha na tabhartasan agad a’ cuideachadh gus goireas co-roinnte a thogail airson a h-uile duine.</p><p><b>Mar a chuireas tu ri chèile:</b><br>1. Sùm gu àite a tha thu eòlach air.<br>2. Briog air feart no cuir fear ùr ris.<br>3. Freagair a’ cheist ghoirid.<br>4. Sàbhail an deasachadh agad — nochdaidh e air a’ mhapa do chàch.</p><p>Feumaidh tu barrachd cuideachaidh? <a href='https://glenachulish.github.io/atlas/contribute.html' target='_blank'>Leugh an stiùireadh slàn an seo</a>.</p><p>Mòran taing airson do chuideachadh le bhith a’ fàs an atlas cho-obrachail seo.</p>"
           }
         }
       ]
@@ -148,6 +148,3 @@
           }
         }
       ]
-    }
-  ]
-}
