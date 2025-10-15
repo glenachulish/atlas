@@ -15,6 +15,20 @@
   "startZoom": 8,
   "layers": [
     {
+      "id": "welcome",
+      "name": { "en": "Welcome" },
+      "title": null,
+      "source": { "osmTags": "always-false" },
+      "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+      "tagRenderings": [
+        {
+          "render": {
+            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more. Your contributions help build a shared resource for everyone.</p><p><b>How to contribute:</b><br>1. Zoom to a place you know.<br>2. Click a feature or add a new one.<br>3. Answer the short question.<br>4. Save your edit — it will appear on the map for others.</p><p>Thank you for helping grow this open, collaborative atlas.</p>"
+          }
+        }
+      ]
+    },
+    {
       "id": "geopolitical-history",
       "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
       "source": { "osmTags": "historic~*" },
@@ -83,56 +97,4 @@
         "en": "{social_history}",
         "gd": "{social_history}"
       },
-      "tagRenderings": [
-        {
-          "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" },
-          "freeform": { "key": "social_history" },
-          "render": {
-            "en": "Social/cultural site: {social_history}",
-            "gd": "Làrach shòisealta/chultarail: {social_history}"
-          }
-        }
-      ]
-    },
-    {
-      "id": "nature",
-      "name": { "en": "Nature", "gd": "Nàdar" },
-      "source": { "osmTags": "natural~*" },
-      "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
-      "title": {
-        "en": "{natural_feature}",
-        "gd": "{natural_feature}"
-      },
-      "tagRenderings": [
-        {
-          "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" },
-          "freeform": { "key": "natural_feature" },
-          "render": {
-            "en": "Natural feature: {natural_feature}",
-            "gd": "Feart nàdair: {natural_feature}"
-          }
-        }
-      ]
-    },
-    {
-      "id": "infrastructure",
-      "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
-      "source": { "osmTags": "man_made~*" },
-      "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
-      "title": {
-        "en": "{man_made}",
-        "gd": "{man_made}"
-      },
-      "tagRenderings": [
-        {
-          "question": { "en": "What infrastructure or industry is here?", "gd": "Dè an bun-structair no gnìomhachas a tha seo?" },
-          "freeform": { "key": "man_made" },
-          "render": {
-            "en": "Infrastructure/industry: {man_made}",
-            "gd": "Bun-structair/no gnìomhachas: {man_made}"
-          }
-        }
-      ]
-    }
-  ]
-}
+      "tagRenderings":
