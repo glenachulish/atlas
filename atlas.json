@@ -133,4 +133,3 @@
       "id": "infrastructure",
       "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
       "source": { "osmTags": "man_made~*" },
-      "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
