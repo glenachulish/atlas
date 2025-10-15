@@ -39,7 +39,7 @@
         {
           "question": { "en": "What geological feature is here?", "gd": "Dè an fheart clach-eòlais a tha an seo?" },
           "freeform": { "key": "geological" },
-           "render": {
+          "render": {
             "en": "Geological feature: {geological}",
             "gd": "Feart clach-eòlais: {geological}"
           }
@@ -55,8 +55,8 @@
         {
           "question": { "en": "What landform is this?", "gd": "Dè an cruth-tìre a tha seo?" },
           "freeform": { "key": "natural" },
-           "render": {
-            "en": "Landforme: {natural}",
+          "render": {
+            "en": "Landform: {natural}",
             "gd": "Cruth-tìre: {natural}"
           }
         }
@@ -71,7 +71,7 @@
         {
           "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" },
           "freeform": { "key": "social_history" },
-           "render": {
+          "render": {
             "en": "Social/cultural site: {social_history}",
             "gd": "Làrach shòisealta/chultarail: {social_history}"
           }
@@ -88,8 +88,9 @@
           "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" },
           "freeform": { "key": "natural_feature" },
           "render": {
-          "en": "Natural feature: {natural_feature}",
+            "en": "Natural feature: {natural_feature}",
             "gd": "Feart nàdair: {natural_feature}"
+          }
         }
       ]
     },
@@ -102,10 +103,10 @@
         {
           "question": { "en": "What infrastructure or industry is here?", "gd": "Dè an bun-structair no gnìomhachas a tha seo?" },
           "freeform": { "key": "man_made" },
-         "render": {
-          "en": "Infrastructure/industry: {man_made}",
+          "render": {
+            "en": "Infrastructure/industry: {man_made}",
             "gd": "Bun-structair/no gnìomhachas: {man_made}"
-        } 
+          }
         }
       ]
     }
