@@ -34,18 +34,12 @@
       "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
       "source": { "osmTags": "historic~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-      "title": {
-        "en": "{historic}",
-        "gd": "{historic}"
-      },
+      "title": { "en": "{historic}", "gd": "{historic}" },
       "tagRenderings": [
         {
           "question": { "en": "What is this historic site?", "gd": "Dè an làrach eachdraidheil a tha seo?" },
           "freeform": { "key": "historic" },
-          "render": {
-            "en": "Historic site: {historic}",
-            "gd": "Làrach eachdraidheil: {historic}"
-          }
+          "render": { "en": "Historic site: {historic}", "gd": "Làrach eachdraidheil: {historic}" }
         }
       ]
     },
@@ -54,18 +48,12 @@
       "name": { "en": "Geology", "gd": "Clach-eòlas" },
       "source": { "osmTags": "geological~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
-      "title": {
-        "en": "{geological}",
-        "gd": "{geological}"
-      },
+      "title": { "en": "{geological}", "gd": "{geological}" },
       "tagRenderings": [
         {
           "question": { "en": "What geological feature is here?", "gd": "Dè an fheart clach-eòlais a tha an seo?" },
           "freeform": { "key": "geological" },
-          "render": {
-            "en": "Geological feature: {geological}",
-            "gd": "Feart clach-eòlais: {geological}"
-          }
+          "render": { "en": "Geological feature: {geological}", "gd": "Feart clach-eòlais: {geological}" }
         }
       ]
     },
@@ -74,18 +62,12 @@
       "name": { "en": "Physical Geography", "gd": "Cruinn-eòlas Fiosaigeach" },
       "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_mountain.svg",
-      "title": {
-        "en": "{natural}",
-        "gd": "{natural}"
-      },
+      "title": { "en": "{natural}", "gd": "{natural}" },
       "tagRenderings": [
         {
           "question": { "en": "What landform is this?", "gd": "Dè an cruth-tìre a tha seo?" },
           "freeform": { "key": "natural" },
-          "render": {
-            "en": "Landform: {natural}",
-            "gd": "Cruth-tìre: {natural}"
-          }
+          "render": { "en": "Landform: {natural}", "gd": "Cruth-tìre: {natural}" }
         }
       ]
     },
@@ -94,18 +76,12 @@
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
       "source": { "osmTags": "social_history~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_village.svg",
-      "title": {
-        "en": "{social_history}",
-        "gd": "{social_history}"
-      },
+      "title": { "en": "{social_history}", "gd": "{social_history}" },
       "tagRenderings": [
         {
           "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" },
           "freeform": { "key": "social_history" },
-          "render": {
-            "en": "Social/cultural site: {social_history}",
-            "gd": "Làrach shòisealta/chultarail: {social_history}"
-          }
+          "render": { "en": "Social/cultural site: {social_history}", "gd": "Làrach shòisealta/chultarail: {social_history}" }
         }
       ]
     },
@@ -114,18 +90,12 @@
       "name": { "en": "Nature", "gd": "Nàdar" },
       "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
-      "title": {
-        "en": "{natural_feature}",
-        "gd": "{natural_feature}"
-      },
+      "title": { "en": "{natural_feature}", "gd": "{natural_feature}" },
       "tagRenderings": [
         {
           "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" },
           "freeform": { "key": "natural_feature" },
-          "render": {
-            "en": "Natural feature: {natural_feature}",
-            "gd": "Feart nàdair: {natural_feature}"
-          }
+          "render": { "en": "Natural feature: {natural_feature}", "gd": "Feart nàdair: {natural_feature}" }
         }
       ]
     },
@@ -133,3 +103,21 @@
       "id": "infrastructure",
       "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
       "source": { "osmTags": "man_made~*" },
+      "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
+      "title": { "en": "{man_made}", "gd": "{man_made}" },
+      "tagRenderings": [
+        {
+          "question": {
+            "en": "What infrastructure or industry is here?",
+            "gd": "Dè an bun-structair no gnìomhachas a tha seo?"
+          },
+          "freeform": { "key": "man_made" },
+          "render": {
+            "en": "Infrastructure/industry: {man_made}",
+            "gd": "Bun-structair/no gnìomhachas: {man_made}"
+          }
+        }
+      ]
+    }
+  ]
+}
