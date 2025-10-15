@@ -17,7 +17,7 @@
     {
       "id": "geopolitical-history",
       "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
-      "source": "osm",
+      "source": { "osmTags": "historic~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "tagRenderings": [
         {
@@ -33,7 +33,7 @@
     {
       "id": "geology",
       "name": { "en": "Geology", "gd": "Clach-eòlas" },
-      "source": "osm",
+      "source": { "osmTags": "geological~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
       "tagRenderings": [
         {
@@ -49,7 +49,7 @@
     {
       "id": "physical-geography",
       "name": { "en": "Physical Geography", "gd": "Cruinn-eòlas Fiosaigeach" },
-      "source": "osm",
+      "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_mountain.svg",
       "tagRenderings": [
         {
@@ -65,7 +65,7 @@
     {
       "id": "social-history",
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
-      "source": "osm",
+      "source": { "osmTags": "social_history~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_village.svg",
       "tagRenderings": [
         {
@@ -81,7 +81,7 @@
     {
       "id": "nature",
       "name": { "en": "Nature", "gd": "Nàdar" },
-      "source": "osm",
+      "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
       "tagRenderings": [
         {
@@ -97,7 +97,7 @@
     {
       "id": "infrastructure",
       "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
-      "source": "osm",
+      "source": { "osmTags": "man_made~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
       "tagRenderings": [
         {
