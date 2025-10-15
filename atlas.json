@@ -22,7 +22,11 @@
       "tagRenderings": [
         {
           "question": { "en": "What is this historic site?", "gd": "Dè an làrach eachdraidheil a tha seo?" },
-          "freeform": { "key": "historic" }
+          "freeform": { "key": "historic" },
+          "render": {
+            "en": "Historic site: {historic}",
+            "gd": "Làrach eachdraidheil: {historic}"
+          }
         }
       ]
     },
