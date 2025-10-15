@@ -1,5 +1,6 @@
 {
   "id": "atlas-of-people-and-place",
+  "version": 1,
   "title": {
     "en": "Atlas of People and Place",
     "gd": "Atlas nan Daoine is nan Àiteachan"
@@ -16,6 +17,7 @@
     {
       "id": "geopolitical-history",
       "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "tagRenderings": [
         {
@@ -27,6 +29,7 @@
     {
       "id": "geology",
       "name": { "en": "Geology", "gd": "Clach-eòlas" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
       "tagRenderings": [
         {
@@ -38,6 +41,7 @@
     {
       "id": "physical-geography",
       "name": { "en": "Physical Geography", "gd": "Cruinn-eòlas Fiosaigeach" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_mountain.svg",
       "tagRenderings": [
         {
@@ -49,6 +53,7 @@
     {
       "id": "social-history",
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_village.svg",
       "tagRenderings": [
         {
@@ -60,6 +65,7 @@
     {
       "id": "nature",
       "name": { "en": "Nature", "gd": "Nàdar" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
       "tagRenderings": [
         {
@@ -71,6 +77,7 @@
     {
       "id": "infrastructure",
       "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
+      "source": "osm",
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
       "tagRenderings": [
         {
