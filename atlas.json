@@ -277,6 +277,7 @@
       "name": { "en": "Custom Point", "gd": "Puing Gnàthaichte" },
      "source": { "osmTags": "key~*" },
       "title": { "en": "{name}", "gd": "{name}" },
+"allowMove": true,
 
 "pointRendering": [
   {
