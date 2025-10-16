@@ -19,9 +19,7 @@
   }
 ],
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-  "startLat": 55.95,
-  "startLon": -3.2,
-  "startZoom": 8,
+
   "startWithLayer": "welcome",
 
   "layers": [
