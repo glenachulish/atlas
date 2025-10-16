@@ -20,12 +20,27 @@
   "id": "welcome",
   "name": { "en": "Welcome", "gd": "Fàilte" },
   "source": { "osmTags": "id=no_such_tag" },
-    "pointRendering": [
-  {
-    "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-    "label": { "en": "{name}", "gd": "{name}" }
-  }
-],
+
+  "pointRendering": [
+    {
+      "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+      "label": { "en": "Welcome", "gd": "Fàilte" }
+    }
+  ],
+
+  "lineRendering": [
+    {
+      "color": "#888888",
+      "width": 1
+    }
+  ],
+
+  "areaRendering": [
+    {
+      "color": "#cccccc",
+      "fill": "#eeeeee"
+    }
+  ],
 
   "tagRenderings": [
     {
