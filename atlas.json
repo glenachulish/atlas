@@ -40,7 +40,7 @@
         { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
         { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
         { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
-        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
     {
@@ -54,7 +54,7 @@
         { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
         { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
         { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
-        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
     {
@@ -68,41 +68,21 @@
         { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
         { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
         { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
-        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
-        {
+    {
       "id": "social-history",
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
       "source": { "osmTags": "social_history~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_village.svg",
       "title": { "en": "{name} ({social_history})", "gd": "{name} ({social_history})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" },
-          "freeform": { "key": "social_history" },
-          "render": { "en": "Social/cultural site: {social_history}", "gd": "Làrach shòisealta/chultarail: {social_history}" }
-        },
-        {
-          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
-          "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
-        },
-        {
-          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
-        },
-        {
-          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
-          "freeform": { "key": "image" },
-          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
-        },
-        {
-          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
-          "freeform": { "key": "url" },
-          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
-        }
+        { "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" }, "freeform": { "key": "social_history" }, "render": { "en": "Social/cultural site: {social_history}", "gd": "Làrach shòisealta/chultarail: {social_history}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
     {
@@ -112,31 +92,11 @@
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
       "title": { "en": "{name} ({natural_feature})", "gd": "{name} ({natural_feature})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" },
-          "freeform": { "key": "natural_feature" },
-          "render": { "en": "Natural feature: {natural_feature}", "gd": "Feart nàdair: {natural_feature}" }
-        },
-        {
-          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
-          "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
-        },
-        {
-          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
-        },
-        {
-          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
-          "freeform": { "key": "image" },
-          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
-        },
-        {
-          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
-          "freeform": { "key": "url" },
-          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
-        }
+        { "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" }, "freeform": { "key": "natural_feature" }, "render": { "en": "Natural feature: {natural_feature}", "gd": "Feart nàdair: {natural_feature}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
     {
@@ -146,66 +106,28 @@
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
       "title": { "en": "{name} ({man_made})", "gd": "{name} ({man_made})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What infrastructure or industry is here?", "gd": "Dè an bun-structair no gnìomhachas a tha seo?" },
-          "freeform": { "key": "man_made" },
-          "render": { "en": "Infrastructure/industry: {man_made}", "gd": "Bun-structair/no gnìomhachas: {man_made}" }
-        },
-        {
-          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
-          "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
-        },
-        {
-          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
-        },
-        {
-          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
-          "freeform": { "key": "image" },
-          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
-        },
-        {
-          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
-          "freeform": { "key": "url" },
-          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
-        }
+        { "question": { "en": "What infrastructure or industry is here?", "gd": "Dè an bun-structair no gnìomhachas a tha seo?" }, "freeform": { "key": "man_made" }, "render": { "en": "Infrastructure/industry: {man_made}", "gd": "Bun-structair/no gnìomhachas: {man_made}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     },
-        {
+    {
       "id": "custom-point",
       "name": { "en": "Custom Point", "gd": "Puing Gnàthaichte" },
       "source": { "osmTags": "note~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_marker.svg",
       "title": { "en": "{name}", "gd": "{name}" },
       "tagRenderings": [
-        {
-          "question": { "en": "What would you like to add here?", "gd": "Dè bu mhath leat a chur an-seo?" },
-          "freeform": { "key": "note" },
-          "render": { "en": "Note: {note}", "gd": "Nòta: {note}" }
-        },
-        {
-          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
-          "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
-        },
-        {
-          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
-        },
-        {
-          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
-          "freeform": { "key": "image" },
-          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
-        },
-        {
-          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
-          "freeform": { "key": "url" },
-          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
-        }
+        { "question": { "en": "What would you like to add here?", "gd": "Dè bu mhath leat a chur an-seo?" }, "freeform": { "key": "note" }, "render": { "en": "Note: {note}", "gd": "Nòta: {note}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
       ]
     }
   ]
 }
+
+
