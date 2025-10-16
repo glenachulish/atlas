@@ -23,7 +23,7 @@
 
   "pointRendering": [
     {
-      "location": ["point"],
+      "location": ["node"],
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "label": { "en": "Welcome", "gd": "Fàilte" }
     }
@@ -96,7 +96,7 @@
       "title": { "en": "{name} ({geological})", "gd": "{name} ({geological})" },
       "pointRendering": [
   {
-    "location": ["point"],
+    "location": ["node"],
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "label": { "en": "{name}", "gd": "{name}" }
   }
@@ -129,7 +129,7 @@
       "source": { "osmTags": "natural~*" },
      "pointRendering": [
   {
-    "location": ["point"],
+    "location": ["node"],
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "label": { "en": "{name}", "gd": "{name}" }
   }
@@ -164,7 +164,7 @@
 
   "pointRendering": [
     {
-      "location": ["point"],
+      "location": ["node"],
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "label": { "en": "{name}", "gd": "{name}" }
     }
@@ -195,7 +195,7 @@
       "source": { "osmTags": "natural~*" },
      "pointRendering": [
   {
-    "location": ["point"],
+    "location": ["node"],
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "label": { "en": "{name}", "gd": "{name}" }
   }
@@ -231,7 +231,7 @@
       "title": { "en": "{name} ({man_made})", "gd": "{name} ({man_made})" },
      "pointRendering": [
   {
-    "location": ["point"],
+    "location": ["node"],
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "label": { "en": "{name}", "gd": "{name}" }
   }
@@ -265,7 +265,7 @@
      "source": { "osmTags": "key~*" },
 "pointRendering": [
   {
-    "location": ["point"],
+    "location": ["node"],
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "label": { "en": "{name}", "gd": "{name}" }
   }
