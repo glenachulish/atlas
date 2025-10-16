@@ -9,12 +9,12 @@
     "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure.",
     "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair."
   },
-  "startScreen": [
+ "startScreen": [
   {
-    "title": { "en": "Test", "gd": "Deuchainn" },
+    "title": { "en": "Welcome", "gd": "Fàilte" },
     "content": {
-      "en": "Hello world",
-      "gd": "Halò a shaoghail"
+      "en": "<h2>Hello world</h2><p>This proves the start screen is working.</p>",
+      "gd": "<h2>Halò a shaoghail</h2><p>Tha seo a’ dearbhadh gu bheil an sgrìn fàilte ag obair.</p>"
     }
   }
 ],
