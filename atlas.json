@@ -19,7 +19,39 @@
   }
 ],
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+{
+  "id": "atlas-of-people-and-place",
+  "version": 1,
+  "title": {
+    "en": "Atlas of People and Place ",
+    "gd": "Atlas nan Daoine is nan Àiteachan"
+  },
+  "description": {
+    "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure.",
+    "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair."
+  },
+  "startScreen": [
+    {
+      "title": { "en": "Welcome", "gd": "Fàilte" },
+      "content": {
+        "en": "<h2>Hello world</h2><p>This proves the start screen is working.</p>",
+        "gd": "<h2>Halò a shaoghail</h2><p>Tha seo a’ dearbhadh gu bheil an sgrìn fàilte ag obair.</p>"
+      }
+    }
+  ],
+  "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
 
+  "mapRendering": [
+    {
+      "location": { "lat": 55.95, "lon": -3.2 },
+      "icon": "https://glenachulish.github.io/atlas/icons/info.svg",
+      "label": { "en": "Contribute", "gd": "Cuir ris" },
+      "popup": {
+        "en": "<h2>How to Contribute</h2><p>See the full guide <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>here</a>.</p>",
+        "gd": "<h2>Mar a chuireas tu ris</h2><p>Faic an stiùireadh slàn <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>an seo</a>.</p>"
+      }
+    }
+  ],
   "startWithLayer": "welcome",
 
   "layers": [
@@ -60,29 +92,6 @@
     }
   ]
 },
-{
-  "id": "contribute-info",
-  "name": { "en": "How to Contribute", "gd": "Mar a chuireas tu ris" },
-  "source": { "osmTags": "id=no_such_tag" },
-  "title": { "en": "Contribute", "gd": "Cuir ris" },
-  "mapRendering": [
-    {
-      "location": [55.95, -3.2],  
-      "icon": "https://glenachulish.github.io/atlas/icons/info.svg",
-      "label": { "en": "Contribute", "gd": "Cuir ris" }
-    }
-  ],
-  "tagRenderings": [
-    {
-      "render": {
-        "en": "<h2>How to Contribute</h2><p>See the full guide <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>here</a>.</p>",
-        "gd": "<h2>Mar a chuireas tu ris</h2><p>Faic an stiùireadh slàn <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>an seo</a>.</p>"
-      }
-    }
-  ]
-},
-
-
     {
     "id": "geopolitical-history",
     "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
