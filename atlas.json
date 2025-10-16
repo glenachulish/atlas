@@ -17,6 +17,7 @@
 
   "layers": [
   {
+  {
   "id": "welcome",
   "name": { "en": "Welcome", "gd": "Fàilte" },
   "source": { "osmTags": "id=no_such_tag" },
@@ -30,15 +31,15 @@
 
   "lineRendering": [
     {
-      "color": "#888888",
+      "color": "#cccccc",
       "width": 1
     }
   ],
 
   "areaRendering": [
     {
-      "color": "#cccccc",
-      "fill": "#eeeeee"
+      "color": "#eeeeee",
+      "fill": "#f9f9f9"
     }
   ],
 
