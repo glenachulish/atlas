@@ -62,7 +62,29 @@
     }
   ]
 },
-  {
+{
+  "id": "contribute-info",
+  "name": { "en": "How to Contribute", "gd": "Mar a chuireas tu ris" },
+  "source": { "osmTags": "id=no_such_tag" },
+  "title": { "en": "Contribute", "gd": "Cuir ris" },
+  "pointRendering": [
+    {
+      "location": [55.95, -3.2],   // fixed lat/lon (centre on Edinburgh — change if you like)
+      "icon": "https://glenachulish.github.io/atlas/icons/info.svg",
+      "label": { "en": "Contribute", "gd": "Cuir ris" }
+    }
+  ],
+  "tagRenderings": [
+    {
+      "render": {
+        "en": "<h2>How to Contribute</h2><p>See the full guide <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>here</a>.</p>",
+        "gd": "<h2>Mar a chuireas tu ris</h2><p>Faic an stiùireadh slàn <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>an seo</a>.</p>"
+      }
+    }
+  ]
+}
+
+    {
     "id": "geopolitical-history",
     "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
       "source": { "osmTags": "historic~*" },
