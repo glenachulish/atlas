@@ -13,6 +13,9 @@
   "startLat": 55.95,
   "startLon": -3.2,
   "startZoom": 8,
+
+  "startWithLayer": "welcome",
+
   "layers": [
     {
       "id": "welcome",
@@ -23,10 +26,9 @@
       "tagRenderings": [
         {
           "render": {
-  "en": "<h2>Welcome to the Atlas</h2><p>Explore and add your knowledge of Scotland’s landscapes, histories, and communities.</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener' style='display:inline-block;padding:10px 16px;margin:8px 0;background-color:#2a7ae2;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;'>🌍 How to Contribute</a></p>",
-  "gd": "<h2>Fàilte don Atlas</h2><p>Rannsaich agus cuir ris d’ fhiosrachadh mu chruthan‑tìre, eachdraidh agus coimhearsnachdan na h‑Alba.</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener' style='display:inline-block;padding:10px 16px;margin:8px 0;background-color:#2a7ae2;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;'>🌍 Mar a chuireas tu ris</a></p>"
-}
-
+            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more.</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener' style='display:inline-block;padding:10px 16px;margin:8px 0;background-color:#2a7ae2;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;'>🌍 How to Contribute</a></p>",
+            "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà‑chànanach seo gad thàladh gus cruthan‑tìre, eachdraidh agus coimhearsnachdan na h‑Alba a rannsachadh agus a neartachadh.</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener' style='display:inline-block;padding:10px 16px;margin:8px 0;background-color:#2a7ae2;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;'>🌍 Mar a chuireas tu ris</a></p>"
+          }
         }
       ]
     },
