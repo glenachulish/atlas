@@ -8,7 +8,7 @@
   "description": {
   "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure. <br/>🌍 <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>How to Contribute (EN)</a> | <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>Mar a chuireas tu ris (GD)</a>",
   "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair. <br/>🌍 <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>Mar a chuireas tu ris (GD)</a> | <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>How to Contribute (EN)</a>"
-}
+},
   "startScreen": [
   {
     "title": { "en": "Welcome", "gd": "Fàilte" },
