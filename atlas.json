@@ -18,7 +18,6 @@
     }
   }
 ],
-,
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startLat": 55.95,
   "startLon": -3.2,
@@ -70,7 +69,6 @@
     "title": { "en": "{name} ({historic})", "gd": "{name} ({historic})" },
 
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-      "title": { "en": "{name} ({historic})", "gd": "{name} ({historic})" },
      "pointRendering": [
   {
     "location": ["point"],
@@ -108,7 +106,6 @@
       "title": { "en": "{name} ({geological})", "gd": "{name} ({geological})" },
 
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
-      "title": { "en": "{name} ({geological})", "gd": "{name} ({geological})" },
       "pointRendering": [
   {
     "location": ["point"],
@@ -249,7 +246,6 @@
       "title": { "en": "{name} ({man_made})", "gd": "{name} ({man_made})" },
 
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
-      "title": { "en": "{name} ({man_made})", "gd": "{name} ({man_made})" },
      "pointRendering": [
   {
     "location": ["point"],
