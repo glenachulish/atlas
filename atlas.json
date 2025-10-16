@@ -19,6 +19,7 @@
   {
     "id": "welcome",
     "name": { "en": "Welcome", "gd": "Fàilte" },
+    "isShown": false,
     "source": { "osmTags": "id=no_such_tag" },
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
     "tagRenderings": [
