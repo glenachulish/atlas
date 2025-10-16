@@ -23,8 +23,8 @@
       "tagRenderings": [
         {
           "render": {
-            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more. Your contributions help build a shared resource for everyone.</p><p><b>How to contribute:</b><br>1. Zoom to a place you know — or tap the <i>locate me</i> button to jump to your current location.<br>2. Click a feature or add a new one.<br>3. Start with a photo if you can, then answer the short question.<br>4. Save your edit — it will appear on the map for others.</p><p>Need more help? <a href='https://glenachulish.github.io/atlas/contribute.html' target='_blank'>Read the instructions in English</a> | <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>Leugh an stiùireadh sa Ghàidhlig</a></p><p>Thank you for helping grow this open, collaborative atlas.</p>",
-            "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà-chànanach seo gad thàladh gus cruthan-tìre, eachdraidh agus coimhearsnachdan na h-Alba a rannsachadh agus a neartachadh. Briog air a’ mhapa gus mion-fhiosrachadh a chur ris mu làraichean eachdraidheil, feartan nàdair, clach-eòlas agus barrachd. Tha na tabhartasan agad a’ cuideachadh gus goireas co-roinnte a thogail airson a h-uile duine.</p><p><b>Mar a chuireas tu ri chèile:</b><br>1. Sùm gu àite a tha thu eòlach air — no cleachd am putan <i>lorg mi</i> gus leum gu d’ àite làithreach.<br>2. Briog air feart no cuir fear ùr ris.<br>3. Tòisich le dealbh ma ghabhas e dèanamh, an uair sin freagair a’ cheist ghoirid.<br>4. Sàbhail an deasachadh agad — nochdaidh e air a’ mhapa do chàch.</p><p>Feumaidh tu barrachd cuideachaidh? <a href='https://glenachulish.github.io/atlas/contribute.html' target='_blank'>Read in English</a> | <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>Leugh sa Ghàidhlig</a></p><p>Mòran taing airson do chuideachadh le bhith a’ fàs an atlas cho-obrachail seo.</p>"
+            "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities. Click on the map to add details about historic sites, natural features, geology, and more. Your contributions help build a shared resource for everyone.</p>",
+            "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà-chànanach seo gad thàladh gus cruthan-tìre, eachdraidh agus coimhearsnachdan na h-Alba a rannsachadh agus a neartachadh.</p>"
           }
         }
       ]
@@ -34,13 +34,13 @@
       "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
       "source": { "osmTags": "historic~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-      "title": { "en": "{historic}", "gd": "{historic}" },
+      "title": { "en": "{name} ({historic})", "gd": "{name} ({historic})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What is this historic site?", "gd": "Dè an làrach eachdraidheil a tha seo?" },
-          "freeform": { "key": "historic" },
-          "render": { "en": "Historic site: {historic}", "gd": "Làrach eachdraidheil: {historic}" }
-        }
+        { "question": { "en": "What is this historic site?", "gd": "Dè an làrach eachdraidheil a tha seo?" }, "freeform": { "key": "historic" }, "render": { "en": "Historic site: {historic}", "gd": "Làrach eachdraidheil: {historic}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
       ]
     },
     {
@@ -48,13 +48,13 @@
       "name": { "en": "Geology", "gd": "Clach-eòlas" },
       "source": { "osmTags": "geological~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
-      "title": { "en": "{geological}", "gd": "{geological}" },
+      "title": { "en": "{name} ({geological})", "gd": "{name} ({geological})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What geological feature is here?", "gd": "Dè an fheart clach-eòlais a tha an seo?" },
-          "freeform": { "key": "geological" },
-          "render": { "en": "Geological feature: {geological}", "gd": "Feart clach-eòlais: {geological}" }
-        }
+        { "question": { "en": "What geological feature is here?", "gd": "Dè an fheart clach-eòlais a tha an seo?" }, "freeform": { "key": "geological" }, "render": { "en": "Geological feature: {geological}", "gd": "Feart clach-eòlais: {geological}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
       ]
     },
     {
@@ -62,26 +62,46 @@
       "name": { "en": "Physical Geography", "gd": "Cruinn-eòlas Fiosaigeach" },
       "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_mountain.svg",
-      "title": { "en": "{natural}", "gd": "{natural}" },
+      "title": { "en": "{name} ({natural})", "gd": "{name} ({natural})" },
       "tagRenderings": [
-        {
-          "question": { "en": "What landform is this?", "gd": "Dè an cruth-tìre a tha seo?" },
-          "freeform": { "key": "natural" },
-          "render": { "en": "Landform: {natural}", "gd": "Cruth-tìre: {natural}" }
-        }
+        { "question": { "en": "What landform is this?", "gd": "Dè an cruth-tìre a tha seo?" }, "freeform": { "key": "natural" }, "render": { "en": "Landform: {natural}", "gd": "Cruth-tìre: {natural}" } },
+        { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
+        { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
+        { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
+        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" } }
       ]
     },
-    {
+        {
       "id": "social-history",
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
       "source": { "osmTags": "social_history~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_village.svg",
-      "title": { "en": "{social_history}", "gd": "{social_history}" },
+      "title": { "en": "{name} ({social_history})", "gd": "{name} ({social_history})" },
       "tagRenderings": [
         {
           "question": { "en": "What social or cultural site is here?", "gd": "Dè an làrach shòisealta no chultarail a tha seo?" },
           "freeform": { "key": "social_history" },
           "render": { "en": "Social/cultural site: {social_history}", "gd": "Làrach shòisealta/chultarail: {social_history}" }
+        },
+        {
+          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
+        },
+        {
+          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
+          "freeform": { "key": "description" },
+          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
+        },
+        {
+          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
+          "freeform": { "key": "image" },
+          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
+        },
+        {
+          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
+          "freeform": { "key": "url" },
+          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
         }
       ]
     },
@@ -90,12 +110,32 @@
       "name": { "en": "Nature", "gd": "Nàdar" },
       "source": { "osmTags": "natural~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_leaf.svg",
-      "title": { "en": "{natural_feature}", "gd": "{natural_feature}" },
+      "title": { "en": "{name} ({natural_feature})", "gd": "{name} ({natural_feature})" },
       "tagRenderings": [
         {
           "question": { "en": "What natural feature is here?", "gd": "Dè an fheart nàdair a tha seo?" },
           "freeform": { "key": "natural_feature" },
           "render": { "en": "Natural feature: {natural_feature}", "gd": "Feart nàdair: {natural_feature}" }
+        },
+        {
+          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
+        },
+        {
+          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
+          "freeform": { "key": "description" },
+          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
+        },
+        {
+          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
+          "freeform": { "key": "image" },
+          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
+        },
+        {
+          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
+          "freeform": { "key": "url" },
+          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
         }
       ]
     },
@@ -104,18 +144,66 @@
       "name": { "en": "Infrastructure & Industry", "gd": "Bun-structair & Gnìomhachas" },
       "source": { "osmTags": "man_made~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_factory.svg",
-      "title": { "en": "{man_made}", "gd": "{man_made}" },
+      "title": { "en": "{name} ({man_made})", "gd": "{name} ({man_made})" },
       "tagRenderings": [
         {
-          "question": {
-            "en": "What infrastructure or industry is here?",
-            "gd": "Dè an bun-structair no gnìomhachas a tha seo?"
-          },
+          "question": { "en": "What infrastructure or industry is here?", "gd": "Dè an bun-structair no gnìomhachas a tha seo?" },
           "freeform": { "key": "man_made" },
-          "render": {
-            "en": "Infrastructure/industry: {man_made}",
-            "gd": "Bun-structair/no gnìomhachas: {man_made}"
-          }
+          "render": { "en": "Infrastructure/industry: {man_made}", "gd": "Bun-structair/no gnìomhachas: {man_made}" }
+        },
+        {
+          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
+        },
+        {
+          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
+          "freeform": { "key": "description" },
+          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
+        },
+        {
+          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
+          "freeform": { "key": "image" },
+          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
+        },
+        {
+          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
+          "freeform": { "key": "url" },
+          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
+        }
+      ]
+    },
+        {
+      "id": "custom-point",
+      "name": { "en": "Custom Point", "gd": "Puing Gnàthaichte" },
+      "source": { "osmTags": "note~*" },
+      "icon": "https://glenachulish.github.io/atlas/icons/atlas_marker.svg",
+      "title": { "en": "{name}", "gd": "{name}" },
+      "tagRenderings": [
+        {
+          "question": { "en": "What would you like to add here?", "gd": "Dè bu mhath leat a chur an-seo?" },
+          "freeform": { "key": "note" },
+          "render": { "en": "Note: {note}", "gd": "Nòta: {note}" }
+        },
+        {
+          "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
+        },
+        {
+          "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" },
+          "freeform": { "key": "description" },
+          "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" }
+        },
+        {
+          "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" },
+          "freeform": { "key": "image" },
+          "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" }
+        },
+        {
+          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
+          "freeform": { "key": "url" },
+          "render": { "en": "<a href='{url}' target='_blank'>{url}</a>", "gd": "<a href='{url}' target='_blank'>{url}</a>" }
         }
       ]
     }
