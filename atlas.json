@@ -67,9 +67,9 @@
   "name": { "en": "How to Contribute", "gd": "Mar a chuireas tu ris" },
   "source": { "osmTags": "id=no_such_tag" },
   "title": { "en": "Contribute", "gd": "Cuir ris" },
-  "pointRendering": [
+  "mapRendering": [
     {
-      "location": [55.95, -3.2],   // fixed lat/lon (centre on Edinburgh — change if you like)
+      "location": [55.95, -3.2],   // fixed lat/lon (Edinburgh centre — change if you like)
       "icon": "https://glenachulish.github.io/atlas/icons/info.svg",
       "label": { "en": "Contribute", "gd": "Cuir ris" }
     }
@@ -82,7 +82,8 @@
       }
     }
   ]
-}
+},
+
 
     {
     "id": "geopolitical-history",
