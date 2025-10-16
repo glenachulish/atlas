@@ -9,27 +9,6 @@
     "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure.",
     "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair."
   },
- "startScreen": [
-  {
-    "title": { "en": "Welcome", "gd": "Fàilte" },
-    "content": {
-      "en": "<h2>Hello world</h2><p>This proves the start screen is working.</p>",
-      "gd": "<h2>Halò a shaoghail</h2><p>Tha seo a’ dearbhadh gu bheil an sgrìn fàilte ag obair.</p>"
-    }
-  }
-],
-  "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-{
-  "id": "atlas-of-people-and-place",
-  "version": 1,
-  "title": {
-    "en": "Atlas of People and Place ",
-    "gd": "Atlas nan Daoine is nan Àiteachan"
-  },
-  "description": {
-    "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure.",
-    "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair."
-  },
   "startScreen": [
     {
       "title": { "en": "Welcome", "gd": "Fàilte" },
@@ -52,9 +31,11 @@
       }
     }
   ],
+
   "startWithLayer": "welcome",
 
   "layers": [
+
   {
   "id": "welcome",
   "name": { "en": "Welcome", "gd": "Fàilte" },
