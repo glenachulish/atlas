@@ -9,11 +9,15 @@
     "en": "A bilingual atlas exploring history, geology, geography, nature, society, and infrastructure.",
     "gd": "Atlas dà-chànanach a’ rannsachadh eachdraidh, clach-eòlas, cruinn-eòlas, nàdar, comann-sòisealta agus bun-structair."
   },
-  "startScreen": {
-  "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities.</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>🌍 How to Contribute</a></p>",
-  "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà‑chànanach seo gad thàladh gus cruthan‑tìre, eachdraidh agus coimhearsnachdan na h‑Alba a rannsachadh agus a neartachadh.</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>🌍 Mar a chuireas tu ris</a></p>"
-},
-
+  "startScreen": [
+  {
+    "title": { "en": "Welcome", "gd": "Fàilte" },
+    "content": {
+      "en": "<h2>Welcome to the Atlas of People and Place</h2><p>This bilingual atlas invites you to explore and enrich Scotland’s landscapes, histories, and communities.</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>🌍 How to Contribute</a></p>",
+      "gd": "<h2>Fàilte don Atlas nan Daoine is nan Àiteachan</h2><p>Tha an atlas dà‑chànanach seo gad thàladh gus cruthan‑tìre, eachdraidh agus coimhearsnachdan na h‑Alba a rannsachadh agus a neartachadh.</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>🌍 Mar a chuireas tu ris</a></p>"
+    }
+  }
+],
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startLat": 55.95,
   "startLon": -3.2,
