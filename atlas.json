@@ -17,7 +17,6 @@
 
   "layers": [
   {
-  {
   "id": "welcome",
   "name": { "en": "Welcome", "gd": "Fàilte" },
   "source": { "osmTags": "id=no_such_tag" },
