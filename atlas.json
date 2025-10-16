@@ -305,10 +305,18 @@
         { "question": { "en": "What is this called?", "gd": "Dè an t-ainm a th’ air seo?" }, "freeform": { "key": "name" }, "render": { "en": "Name: {name}", "gd": "Ainm: {name}" } },
         { "question": { "en": "Can you describe it?", "gd": "An urrainn dhut a mhìneachadh?" }, "freeform": { "key": "description" }, "render": { "en": "Description: {description}", "gd": "Tuairisgeul: {description}" } },
         { "question": { "en": "Add a photo", "gd": "Cuir dealbh ris" }, "freeform": { "key": "image" }, "render": { "en": "<img src='{image}'/>", "gd": "<img src='{image}'/>" } },
-        { "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" }, "freeform": { "key": "url" }, "render": { "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" } }
+               { 
+          "question": { "en": "Add a link for more information", "gd": "Cuir ceangal airson barrachd fiosrachaidh" },
+          "freeform": { "key": "url" },
+          "render": { 
+            "en": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>", 
+            "gd": "<a href='{url}' target='_blank' rel='noopener'>{url}</a>" 
+          }
+        }
       ]
     }
   ]
 }
+
 
 
