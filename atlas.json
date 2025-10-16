@@ -23,9 +23,6 @@
   "startWithLayer": "welcome",
 
   "layers": [
-    …
-
-
   {
   "id": "welcome",
   "name": { "en": "Welcome", "gd": "Fàilte" },
