@@ -16,24 +16,23 @@
   "startWithLayer": "welcome",
 
   "layers": [
-    {
-      "id": "welcome",
-      "name": { "en": "Welcome", "gd": "Fàilte" },
-      "title": null,
-      "source": { "osmTags": "id=no_such_tag" },
-      "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-      "tagRenderings": [
   {
-    "render": {
-      "en": "<h2>Welcome…</h2><p>…</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>🌍 How to Contribute</a></p>",
-      "gd": "<h2>Fàilte…</h2><p>…</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>🌍 Mar a chuireas tu ris</a></p>"
-    }
-  }
-]
-    },
-    {
-      "id": "geopolitical-history",
-      "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
+    "id": "welcome",
+    "name": { "en": "Welcome", "gd": "Fàilte" },
+    "source": { "osmTags": "id=no_such_tag" },
+    "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+    "tagRenderings": [
+      {
+        "render": {
+          "en": "<h2>Welcome…</h2><p>…</p><p><a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank'>🌍 How to Contribute</a></p>",
+          "gd": "<h2>Fàilte…</h2><p>…</p><p><a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank'>🌍 Mar a chuireas tu ris</a></p>"
+        }
+      }
+    ]
+  },
+  {
+    "id": "geopolitical-history",
+    "name": { "en": "Geopolitical History", "gd": "Eachdraidh Phoilitigeach" },
       "source": { "osmTags": "historic~*" },
       "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
       "title": { "en": "{name} ({historic})", "gd": "{name} ({historic})" },
