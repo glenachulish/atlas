@@ -256,7 +256,7 @@
     {
       "id": "custom-point",
       "name": { "en": "Custom Point", "gd": "Puing Gnàthaichte" },
-     "source": { "osmTags": "key~*" }
+     "source": { "osmTags": "key~*" },
 "pointRendering": [
   {
     "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
