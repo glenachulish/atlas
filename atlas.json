@@ -52,9 +52,9 @@
         },
         {
           "id": "poi-photo",
-          "question": { "en": "Add a photo" },
+          "question": { "en": "Add a photo URL" },
           "freeform": { "key": "image" },
-          "render": { "en": "{image()}" }
+          "render": { "en": "<img src='{image}' style='max-width: 300px; height: auto;' />" }
         },
         {
           "id": "poi-url",
