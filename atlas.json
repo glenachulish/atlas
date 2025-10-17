@@ -54,10 +54,10 @@
           "id": "new-feature-category",
           "question": { "en": "Which category does this belong to?", "gd": "Dè an roinn a bhuineas seo dhi?" },
           "mappings": [
-            { "if": "theme=geology", "then": { "en": "Geology", "gd": "Clach‑eòlas" }, "setTags": { "theme": "geology" } },
-            { "if": "theme=nature", "then": { "en": "Nature", "gd": "Nàdar" }, "setTags": { "theme": "nature" } },
-            { "if": "theme=social", "then": { "en": "Social History", "gd": "Eachdraidh Shòisealta" }, "setTags": { "theme": "social" } },
-            { "if": "theme=infrastructure", "then": { "en": "Infrastructure", "gd": "Bun‑structar" }, "setTags": { "theme": "infrastructure" } }
+            { "then": { "en": "Geology", "gd": "Clach‑eòlas" }, "setTags": { "theme": "geology" } },
+            { "then": { "en": "Nature", "gd": "Nàdar" }, "setTags": { "theme": "nature" } },
+            { "then": { "en": "Social History", "gd": "Eachdraidh Shòisealta" }, "setTags": { "theme": "social" } },
+            { "then": { "en": "Infrastructure", "gd": "Bun‑structar" }, "setTags": { "theme": "infrastructure" } }
           ],
           "render": { "en": "Category: {theme}", "gd": "Roinn: {theme}" }
         },
@@ -75,6 +75,8 @@
         }
       ]
     },
+
+
     {
       "id": "geology",
       "name": { "en": "Geology", "gd": "Clach‑eòlas" },
@@ -123,6 +125,8 @@
         }
       ]
     },
+
+
     {
       "id": "social-history",
       "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
@@ -147,6 +151,8 @@
         }
       ]
     },
+
+
     {
       "id": "infrastructure",
       "name": { "en": "Infrastructure", "gd": "Bun‑structar" },
@@ -173,3 +179,4 @@
     }
   ]
 }
+
