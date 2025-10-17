@@ -60,7 +60,7 @@
           "id": "poi-url",
           "question": { "en": "Add a website URL" },
           "freeform": { "key": "website" },
-          "render": { "en": "Website: <a href='{website}' target='_blank' rel='noopener'>{website}</a>" }
+          "render": { "en": "Website: {website}" }
         },
         {
           "id": "poi-tags",
