@@ -1,37 +1,175 @@
 {
-  "id": "new-feature",
-  "name": { "en": "Add a Feature" },
-  "source": { "osmTags": "id=-1", "geometry": "point" },
-  "allowAdd": true,
-  "allowMove": true,
-  "pointRendering": [
-    { "location": ["point"], "icon": "circle", "label": "{name}" }
+  "id": "atlas",
+  "title": { 
+    "en": "Atlas of People and Place",
+    "gd": "Atlas nan Daoine is nan Àiteachan"
+  },
+  "description": {
+    "en": "A bilingual atlas for adding and exploring points of interest. All data is stored in OpenStreetMap and can be freely reused.",
+    "gd": "Atlas dà‑chànanach airson puingean ùidh a chur ris agus a rannsachadh. Tha an dàta uile air a stòradh ann an OpenStreetMap agus faodar a chleachdadh gu saor."
+  },
+  "welcomeMessage": {
+    "en": "👋 Welcome to the Atlas of People and Place!\n\n➡️ Contributor guidance (English): https://your.link/english\n➡️ Stiùireadh luchd‑cur ris (Gàidhlig): https://your.link/gaelic\n\nTap + to add a feature. Log in to contribute.\n\nOn this map, you can see, edit and add points of interest. Zoom around to see the POI, tap one to see or edit the information. All data is sourced from and saved to OpenStreetMap, which can be freely reused.",
+    "gd": "👋 Fàilte don Atlas nan Daoine is nan Àiteachan!\n\n➡️ Stiùireadh luchd‑cur ris (Beurla): https://your.link/english\n➡️ Stiùireadh luchd‑cur ris (Gàidhlig): https://your.link/gaelic\n\nBriog air + gus feart ùr a chur ris. Clàraich a-steach gus cur ris.\n\nAir a’ mhapa seo, ’s urrainn dhut puingean ùidh fhaicinn, deasachadh agus cur ris. Gluais timcheall gus na puingean fhaicinn, briog air fear gus am fiosrachadh fhaicinn no a dheasachadh. Tha an dàta uile a’ tighinn bho OpenStreetMap agus faodar a chleachdadh gu saor."
+  },
+  "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+  "startWithLayer": "new-feature",
+
+  "backgroundLayers": [
+    {
+      "id": "os-road",
+      "name": { "en": "OS Road Map", "gd": "Mapa Rathaidean OS" },
+      "url": "https://api.os.uk/maps/raster/v1/zxy/Road_27700/{z}/{x}/{y}.png?key=9UBIqO49tAyzDUMZwd10lAGLJ4bVHWTn",
+      "attribution": "Contains OS data © Crown copyright and database rights 2025",
+      "maxZoom": 20
+    },
+    {
+      "id": "osm-default",
+      "name": { "en": "OpenStreetMap", "gd": "OpenStreetMap" },
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "attribution": "© OpenStreetMap contributors",
+      "maxZoom": 19
+    }
   ],
-  "lineRendering": [ { "color": "#00000000", "width": 0 } ],
-  "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
-  "tagRenderings": [
+
+  "layers": [
     {
-      "id": "new-feature-category",
-      "question": "Which category does this belong to?",
-      "mappings": [
-        { "if": "theme=geology", "then": "Geology" },
-        { "if": "theme=nature", "then": "Nature" },
-        { "if": "theme=social", "then": "Social History" },
-        { "if": "theme=infrastructure", "then": "Infrastructure" }
+      "id": "new-feature",
+      "name": { "en": "Add a Feature", "gd": "Cuir feart ris" },
+      "source": { "osmTags": "id=-1", "geometry": "point" },
+      "title": { "en": "{name}", "gd": "{name}" },
+      "allowAdd": true,
+      "allowMove": true,
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+          "label": "{name}"
+        }
       ],
-      "render": "Category: {theme}"
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "tagRenderings": [
+        {
+          "id": "new-feature-category",
+          "question": { "en": "Which category does this belong to?", "gd": "Dè an roinn a bhuineas seo dhi?" },
+          "mappings": [
+            { "if": "theme=geology", "then": { "en": "Geology", "gd": "Clach‑eòlas" } },
+            { "if": "theme=nature", "then": { "en": "Nature", "gd": "Nàdar" } },
+            { "if": "theme=social", "then": { "en": "Social History", "gd": "Eachdraidh Shòisealta" } },
+            { "if": "theme=infrastructure", "then": { "en": "Infrastructure", "gd": "Bun‑structar" } }
+          ],
+          "render": { "en": "Category: {theme}", "gd": "Roinn: {theme}" }
+        },
+        {
+          "id": "new-feature-name",
+          "question": { "en": "What is this called?", "gd": "Dè an t‑ainm a th’ air seo?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}", "gd": "Ainm: {name}" }
+        },
+        {
+          "id": "new-feature-note",
+          "question": { "en": "Any notes?", "gd": "A bheil notaichean sam bith ann?" },
+          "freeform": { "key": "note" },
+          "render": { "en": "Note: {note}", "gd": "Nota: {note}" }
+        }
+      ]
     },
     {
-      "id": "new-feature-name",
-      "question": "Name?",
-      "freeform": { "key": "name" },
-      "render": "Name: {name}"
+      "id": "geology",
+      "name": { "en": "Geology", "gd": "Clach‑eòlas" },
+      "source": { "osmTags": "theme=geology", "geometry": "point" },
+      "title": { "en": "{name}", "gd": "{name}" },
+      "allowMove": true,
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_rock.svg",
+          "label": "{name}"
+        }
+      ],
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "tagRenderings": [
+        {
+          "id": "geology-desc",
+          "question": { "en": "Describe the geology", "gd": "Mìnich an clach‑eòlas" },
+          "freeform": { "key": "geological" },
+          "render": { "en": "Geology: {geological}", "gd": "Clach‑eòlas: {geological}" }
+        }
+      ]
     },
     {
-      "id": "new-feature-note",
-      "question": "Any notes?",
-      "freeform": { "key": "note" },
-      "render": "Note: {note}"
+      "id": "nature",
+      "name": { "en": "Nature", "gd": "Nàdar" },
+      "source": { "osmTags": "theme=nature", "geometry": "point" },
+      "title": { "en": "{name}", "gd": "{name}" },
+      "allowMove": true,
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_tree.svg",
+          "label": "{name}"
+        }
+      ],
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "tagRenderings": [
+        {
+          "id": "nature-desc",
+          "question": { "en": "What natural feature is this?", "gd": "Dè an nì nàdair a tha seo?" },
+          "freeform": { "key": "natural" },
+          "render": { "en": "Nature: {natural}", "gd": "Nàdar: {natural}" }
+        }
+      ]
+    },
+    {
+      "id": "social-history",
+      "name": { "en": "Social History", "gd": "Eachdraidh Shòisealta" },
+      "source": { "osmTags": "theme=social", "geometry": "point" },
+      "title": { "en": "{name}", "gd": "{name}" },
+      "allowMove": true,
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_people.svg",
+          "label": "{name}"
+        }
+      ],
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "tagRenderings": [
+        {
+          "id": "social-history-desc",
+          "question": { "en": "What is the social or historical significance?", "gd": "Dè an cudrom sòisealta no eachdraidheil a th’ ann?" },
+          "freeform": { "key": "historic" },
+          "render": { "en": "History: {historic}", "gd": "Eachdraidh: {historic}" }
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": { "en": "Infrastructure", "gd": "Bun‑structar" },
+      "source": { "osmTags": "theme=infrastructure", "geometry": "point" },
+      "title": { "en": "{name}", "gd": "{name}" },
+      "allowMove": true,
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_bridge.svg",
+          "label": "{name}"
+        }
+      ],
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "tagRenderings": [
+        {
+          "id": "infrastructure-desc",
+          "question": { "en": "What type of infrastructure is this?", "gd": "Dè an seòrsa bun‑structair a th’ ann?" },
+          "freeform": { "key": "infrastructure" },
+          "render": { "en": "Infrastructure: {infrastructure}", "gd": "Bun‑structar: {infrastructure}" }
+        }
+      ]
     }
   ]
 }
