@@ -1,7 +1,7 @@
 {
   "id": "atlas-test",
   "title": { "en": "Atlas Minimal Test" },
-  "description": { "en": "A stripped‑down test atlas to add points of interest." },
+  "description": { "en": "Add points of interest with a name." },
   "welcomeMessage": { "en": "👋 Tap + to add a point of interest." },
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startWithLayer": "poi",
@@ -45,12 +45,6 @@
           "question": { "en": "What is this place called?" },
           "freeform": { "key": "name" },
           "render": { "en": "Name: {name}" }
-        },
-        {
-          "id": "poi-description",
-          "question": { "en": "Add a short description" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}" }
         }
       ]
     }
