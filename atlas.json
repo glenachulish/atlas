@@ -47,12 +47,6 @@
             { "then": "Test Category", "setTags": { "theme": "test" } }
           ],
           "render": { "en": "Category: {theme}" }
-        },
-        {
-          "id": "new-feature-name",
-          "question": { "en": "What is this called?" },
-          "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}" }
         }
       ]
     }
