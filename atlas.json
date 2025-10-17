@@ -36,18 +36,10 @@
       ],
 
       "lineRendering": [
-        {
-          "color": "#00000000",
-          "width": 0
-        }
+        { "color": "#00000000", "width": 0 }
       ],
-
       "areaRendering": [
-        {
-          "fillColor": "#00000000",
-          "strokeColor": "#00000000",
-          "strokeWidth": 0
-        }
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
       ],
 
       "tagRenderings": [
@@ -67,7 +59,7 @@
           "id": "poi-photo",
           "question": { "en": "Add a photo" },
           "freeform": { "key": "image" },
-          "render": { "en": "Photo: {image}" }
+          "render": { "en": "Photo", "image": "{image}" }
         },
         {
           "id": "poi-url",
