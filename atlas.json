@@ -51,28 +51,16 @@
           "render": { "en": "Description: {description}" }
         },
         {
-          "id": "poi-photo",
-          "question": { "en": "Add a photo URL" },
-          "freeform": { "key": "image" },
-          "render": { 
-            "en": "Photo: {image}",
-            "special": {
-              "type": "image",
-              "url": "{image}"
-            }
+          "builtin": "images",
+          "override": {
+            "id": "poi-photo"
           }
         },
         {
           "id": "poi-url",
           "question": { "en": "Add a website URL" },
           "freeform": { "key": "website" },
-          "render": { 
-            "en": "Website: {website}",
-            "special": {
-              "type": "website",
-              "url": "{website}"
-            }
-          }
+          "render": { "en": "<a href='{website}' target='_blank' rel='noopener'>Visit Website</a>" }
         },
         {
           "id": "poi-tags",
