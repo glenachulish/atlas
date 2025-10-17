@@ -20,19 +20,21 @@
     {
       "id": "new-feature",
       "name": { "en": "Add a Feature" },
-      "source": { "osmTags": "id=-1", "geometry": "point" },
+      "source": { "osmTags": "id=-1" },
       "title": { "en": "{name}" },
       "allowAdd": true,
       "allowMove": true,
 
       "pointRendering": [
-        { "location": ["point"], "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg", "label": "{name}" }
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+          "label": "{name}"
+        }
       ],
-
       "lineRendering": [
         { "color": "#00000000", "width": 0 }
       ],
-
       "areaRendering": [
         { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
       ],
@@ -45,6 +47,12 @@
             { "then": "Test Category", "setTags": { "theme": "test" } }
           ],
           "render": { "en": "Category: {theme}" }
+        },
+        {
+          "id": "new-feature-name",
+          "question": { "en": "What is this called?" },
+          "freeform": { "key": "name" },
+          "render": { "en": "Name: {name}" }
         }
       ]
     }
