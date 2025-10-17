@@ -1,0 +1,42 @@
+{
+  "id": "atlas-test",
+  "title": { "en": "Atlas Minimal Test" },
+  "description": { "en": "A stripped‑down test atlas to isolate Fuse errors." },
+  "welcomeMessage": { "en": "👋 Minimal test atlas. Tap + to add a feature." },
+  "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+  "startWithLayer": "new-feature",
+
+  "backgroundLayers": [
+    {
+      "id": "osm-default",
+      "name": { "en": "OpenStreetMap" },
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "attribution": "© OpenStreetMap contributors",
+      "maxZoom": 19
+    }
+  ],
+
+  "layers": [
+    {
+      "id": "new-feature",
+      "name": { "en": "Add a Feature" },
+      "source": { "osmTags": "id=-1", "geometry": "point" },
+      "title": { "en": "{name}" },
+      "allowAdd": true,
+      "allowMove": true,
+      "pointRendering": [
+        { "location": ["point"], "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg", "label": "{name}" }
+      ],
+      "tagRenderings": [
+        {
+          "id": "new-feature-category",
+          "question": { "en": "Which category does this belong to?" },
+          "mappings": [
+            { "then": "Test Category", "setTags": { "theme": "test" } }
+          ],
+          "render": { "en": "Category: {theme}" }
+        }
+      ]
+    }
+  ]
+}
