@@ -1,20 +1,24 @@
 {
-  "id": "test-add",
-  "title": { "en": "Test Add Button" },
-  "description": { "en": "Minimal theme to test add button" },
-  "layers": [
+  "id": "new-feature",
+  "name": { "en": "Add a Feature" },
+  "source": { "osmTags": "id=-1", "geometry": "point" },
+  "allowAdd": true,
+  "allowMove": true,
+  "pointRendering": [
+    { "location": ["point"], "icon": "circle", "label": "{name}" }
+  ],
+  "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+  "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+  "tagRenderings": [
     {
-      "id": "new-feature",
-      "name": { "en": "Add a Feature" },
-      "source": { "osmTags": "id=-1", "geometry": "point" },
-      "allowAdd": true,
-      "allowMove": true,
-      "pointRendering": [
-        { "location": ["point"], "icon": "circle", "label": "{name}" }
-      ],
-      "tagRenderings": [
-        { "question": "Name?", "freeform": { "key": "name" } }
-      ]
+      "question": "Name?",
+      "freeform": { "key": "name" },
+      "render": "Name: {name}"
+    },
+    {
+      "question": "Any notes?",
+      "freeform": { "key": "note" },
+      "render": "Note: {note}"
     }
   ]
 }
