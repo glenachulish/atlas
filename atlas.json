@@ -7,7 +7,6 @@
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startWithLayer": "new-feature",
 
-  
   "backgroundLayers": [
     {
       "id": "os-road",
@@ -40,6 +39,8 @@
           "label": "{name}"
         }
       ],
+      "lineRendering": [],
+      "areaRendering": [],
       "tagRenderings": [
         {
           "question": "Which category does this belong to?",
@@ -75,6 +76,8 @@
           "label": "{name}"
         }
       ],
+      "lineRendering": [],
+      "areaRendering": [],
       "tagRenderings": [
         {
           "question": "Describe the geology",
@@ -96,6 +99,8 @@
           "label": "{name}"
         }
       ],
+      "lineRendering": [],
+      "areaRendering": [],
       "tagRenderings": [
         {
           "question": "What natural feature is this?",
@@ -117,6 +122,8 @@
           "label": "{name}"
         }
       ],
+      "lineRendering": [],
+      "areaRendering": [],
       "tagRenderings": [
         {
           "question": "What is the social or historical significance?",
@@ -138,6 +145,8 @@
           "label": "{name}"
         }
       ],
+      "lineRendering": [],
+      "areaRendering": [],
       "tagRenderings": [
         {
           "question": "What type of infrastructure is this?",
