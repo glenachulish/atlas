@@ -39,8 +39,12 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [],
-      "areaRendering": [],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
       "tagRenderings": [
         {
           "question": "Which category does this belong to?",
@@ -76,8 +80,12 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [],
-      "areaRendering": [],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
       "tagRenderings": [
         {
           "question": "Describe the geology",
@@ -99,8 +107,12 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [],
-      "areaRendering": [],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
       "tagRenderings": [
         {
           "question": "What natural feature is this?",
@@ -122,8 +134,12 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [],
-      "areaRendering": [],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
       "tagRenderings": [
         {
           "question": "What is the social or historical significance?",
@@ -145,8 +161,12 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [],
-      "areaRendering": [],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
       "tagRenderings": [
         {
           "question": "What type of infrastructure is this?",
