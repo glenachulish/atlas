@@ -28,7 +28,7 @@
     {
       "id": "new-feature",
       "name": { "en": "Add a Feature" },
-      "source": { "osmTags": "theme~*" },
+      "source": { "osmTags": "theme~*", "geometry": "point" },
       "title": { "en": "{name}" },
       "allowAdd": true,
       "allowMove": true,
@@ -64,7 +64,7 @@
     {
       "id": "geology",
       "name": { "en": "Geology" },
-      "source": { "osmTags": "theme=geology" },
+      "source": { "osmTags": "theme=geology", "geometry": "point" },
       "title": "{name}",
       "allowMove": true,
       "pointRendering": [
@@ -85,7 +85,7 @@
     {
       "id": "nature",
       "name": { "en": "Nature" },
-      "source": { "osmTags": "theme=nature" },
+      "source": { "osmTags": "theme=nature", "geometry": "point" },
       "title": "{name}",
       "allowMove": true,
       "pointRendering": [
@@ -106,7 +106,7 @@
     {
       "id": "social-history",
       "name": { "en": "Social History" },
-      "source": { "osmTags": "theme=social" },
+      "source": { "osmTags": "theme=social", "geometry": "point" },
       "title": "{name}",
       "allowMove": true,
       "pointRendering": [
@@ -127,7 +127,7 @@
     {
       "id": "infrastructure",
       "name": { "en": "Infrastructure" },
-      "source": { "osmTags": "theme=infrastructure" },
+      "source": { "osmTags": "theme=infrastructure", "geometry": "point" },
       "title": "{name}",
       "allowMove": true,
       "pointRendering": [
