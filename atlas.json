@@ -56,7 +56,7 @@
           "id": "poi-photo",
           "question": { "en": "Add a photo" },
           "freeform": { "key": "image" },
-          "render": { "en": "Photo", "image": "{image}" }
+          "render": { "en": "Photo: {image}" }
         },
         {
           "id": "poi-url",
