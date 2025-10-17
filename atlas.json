@@ -20,7 +20,7 @@
     {
       "id": "poi",
       "name": { "en": "Point of Interest" },
-      "source": { "osmTags": "poi=yes", "geometry": "point" },
+      "source": { "osmTags": "name~*", "geometry": "point" },
       "title": { "en": "{name}" },
       "allowAdd": true,
       "allowMove": true,
