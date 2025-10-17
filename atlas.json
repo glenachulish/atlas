@@ -7,6 +7,7 @@
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startWithLayer": "new-feature",
 
+  
   "backgroundLayers": [
     {
       "id": "os-road",
