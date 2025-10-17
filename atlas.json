@@ -20,7 +20,7 @@
     {
       "id": "poi",
       "name": { "en": "Point of Interest" },
-      "source": { "osmTags": "name~*", "geometry": "point" },
+      "source": { "osmTags": "atlas_poi=yes", "geometry": "point" },
       "title": { "en": "{name}" },
       "allowAdd": true,
       "allowMove": true,
@@ -32,14 +32,19 @@
           "label": "{name}"
         }
       ],
-      "lineRendering": [
-        { "color": "#00000000", "width": 0 }
-      ],
-      "areaRendering": [
-        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
-      ],
+
+      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
+      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
 
       "tagRenderings": [
+        {
+          "id": "poi-autotag",
+          "question": { "en": "Internal: mark as POI" },
+          "mappings": [
+            { "then": "POI", "setTags": { "atlas_poi": "yes" } }
+          ],
+          "render": { "en": "" }
+        },
         {
           "id": "poi-name",
           "question": { "en": "What is this place called?" },
