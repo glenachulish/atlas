@@ -29,22 +29,28 @@
         {
           "location": ["point"],
           "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+          "iconSize": "40,40",
+          "anchor": "center",
           "label": "{name}"
         }
       ],
 
-      "lineRendering": [ { "color": "#00000000", "width": 0 } ],
-      "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
+      "lineRendering": [
+        {
+          "color": "#00000000",
+          "width": 0
+        }
+      ],
+
+      "areaRendering": [
+        {
+          "fillColor": "#00000000",
+          "strokeColor": "#00000000",
+          "strokeWidth": 0
+        }
+      ],
 
       "tagRenderings": [
-        {
-          "id": "poi-autotag",
-          "question": { "en": "Internal: mark as POI" },
-          "mappings": [
-            { "then": "POI", "setTags": { "atlas_poi": "yes" } }
-          ],
-          "render": { "en": "" }
-        },
         {
           "id": "poi-name",
           "question": { "en": "What is this place called?" },
@@ -74,6 +80,14 @@
           "question": { "en": "Add tags (e.g. geology, nature)" },
           "freeform": { "key": "tags" },
           "render": { "en": "Tags: {tags}" }
+        }
+      ],
+
+      "presets": [
+        {
+          "title": { "en": "Add Point of Interest" },
+          "tags": ["atlas_poi=yes"],
+          "description": { "en": "Add a new point of interest to the map" }
         }
       ]
     }
