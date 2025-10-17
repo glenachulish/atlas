@@ -52,14 +52,20 @@
       "tagRenderings": [
         {
           "id": "new-feature-category",
-          "question": { "en": "Which category does this belong to?", "gd": "Dè an roinn a bhuineas seo dhi?" },
+          "question": {
+            "en": "Which category does this belong to?",
+            "gd": "Dè an roinn a bhuineas seo dhi?"
+          },
           "mappings": [
-            { "then": { "en": "Geology", "gd": "Clach‑eòlas" }, "setTags": { "theme": "geology" } },
-            { "then": { "en": "Nature", "gd": "Nàdar" }, "setTags": { "theme": "nature" } },
-            { "then": { "en": "Social History", "gd": "Eachdraidh Shòisealta" }, "setTags": { "theme": "social" } },
-            { "then": { "en": "Infrastructure", "gd": "Bun‑structar" }, "setTags": { "theme": "infrastructure" } }
+            { "then": "Geology", "setTags": { "theme": "geology" } },
+            { "then": "Nature", "setTags": { "theme": "nature" } },
+            { "then": "Social History", "setTags": { "theme": "social" } },
+            { "then": "Infrastructure", "setTags": { "theme": "infrastructure" } }
           ],
-          "render": { "en": "Category: {theme}", "gd": "Roinn: {theme}" }
+          "render": {
+            "en": "Category: {theme}",
+            "gd": "Roinn: {theme}"
+          }
         },
         {
           "id": "new-feature-name",
@@ -74,7 +80,10 @@
           "render": { "en": "Note: {note}", "gd": "Nota: {note}" }
         }
       ]
-    },
+    }
+  ]
+}
+
 
 
 
