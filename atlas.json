@@ -24,14 +24,17 @@
 
   "layers": [
     {
-      "id": "welcome",
-      "name": { "en": "Welcome" },
-      "title": { "en": "Welcome" },
-      "description": { "en": "Tap + to add a feature. Log in to contribute." },
-      "minZoom": 0,
-      "maxZoom": 24,
-      "isShown": true
-    },
+  "id": "welcome",
+  "name": { "en": "Welcome" },
+  "title": { "en": "Welcome" },
+  "description": { 
+    "en": "👋 **Welcome to the Atlas of People and Place!**\n\n➡️ [**Click here for contributor guidance**](https://your.link.here)\n\nTap **+** to add a feature. Log in to contribute." 
+  },
+  "source": { "osmTags": "id~*" },
+  "minZoom": 0,
+  "maxZoom": 24,
+  "isShown": true
+},
     {
       "id": "new-feature",
       "name": { "en": "Add a Feature" },
