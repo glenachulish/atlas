@@ -42,20 +42,20 @@
           "id": "poi-name",
           "question": { "en": "What is this place called?" },
           "freeform": { "key": "name" },
-          "render": { "en": "<strong>Name:</strong> {name}" }
+          "render": { "en": "Name: {name}" }
         },
         {
           "id": "poi-description",
           "question": { "en": "Add a short description" },
           "freeform": { "key": "description" },
-          "render": { "en": "<strong>Description:</strong> {description}" }
+          "render": { "en": "Description: {description}" }
         },
         {
           "id": "poi-photo",
           "question": { "en": "Add a photo URL" },
           "freeform": { "key": "image" },
           "render": { 
-            "en": "<div style='margin: 10px 0;'><strong>Photo:</strong><br><img src='{image}' style='max-width: 100%; height: auto; display: block; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px;' onerror=\"this.style.display='none'\"></div>"
+            "en": "<img src='{image}' width='300' />"
           }
         },
         {
@@ -63,14 +63,14 @@
           "question": { "en": "Add a website URL" },
           "freeform": { "key": "website" },
           "render": { 
-            "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener noreferrer' style='color: #0066cc; text-decoration: underline;'>{website}</a>"
+            "en": "<a href='{website}' target='_blank'>Visit Website</a>"
           }
         },
         {
           "id": "poi-tags",
           "question": { "en": "Add tags (e.g. geology, nature)" },
           "freeform": { "key": "tags" },
-          "render": { "en": "<strong>Tags:</strong> {tags}" }
+          "render": { "en": "Tags: {tags}" }
         }
       ],
       "presets": [
