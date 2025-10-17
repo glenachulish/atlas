@@ -11,6 +11,15 @@
   "areaRendering": [ { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 } ],
   "tagRenderings": [
     {
+      "question": "Which category does this belong to?",
+      "mappings": [
+        { "if": "theme=geology", "then": "Geology" },
+        { "if": "theme=nature", "then": "Nature" },
+        { "if": "theme=social", "then": "Social History" },
+        { "if": "theme=infrastructure", "then": "Infrastructure" }
+      ]
+    },
+    {
       "question": "Name?",
       "freeform": { "key": "name" },
       "render": "Name: {name}"
