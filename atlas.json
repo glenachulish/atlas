@@ -1,16 +1,18 @@
 {
   "id": "atlas",
   "title": { "en": "Atlas of People and Place" },
-  "description": { "en": "A bilingual atlas for contributors" },
+  "description": { 
+    "en": "👋 **Welcome to the Atlas of People and Place!**\n\n➡️ [**Click here for contributor guidance**](https://your.link.here)\n\nTap **+** to add a feature. Log in to contribute." 
+  },
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
-  "startWithLayer": "welcome",
+  "startWithLayer": "new-feature",
 
   "backgroundLayers": [
     {
       "id": "os-road",
       "name": { "en": "OS Road Map" },
       "url": "https://api.os.uk/maps/raster/v1/zxy/Road_27700/{z}/{x}/{y}.png?key=9UBIqO49tAyzDUMZwd10lAGLJ4bVHWTn",
-      "attribution": "© Ordnance Survey",
+      "attribution": "Contains OS data © Crown copyright and database rights 2025",
       "maxZoom": 20
     },
     {
@@ -23,18 +25,6 @@
   ],
 
   "layers": [
-    {
-  "id": "welcome",
-  "name": { "en": "Welcome" },
-  "title": { "en": "Welcome" },
-  "description": { 
-    "en": "👋 **Welcome to the Atlas of People and Place!**\n\n➡️ [**Click here for contributor guidance**](https://your.link.here)\n\nTap **+** to add a feature. Log in to contribute." 
-  },
-  "source": { "osmTags": "id~*" },
-  "minZoom": 0,
-  "maxZoom": 24,
-  "isShown": true
-},
     {
       "id": "new-feature",
       "name": { "en": "Add a Feature" },
