@@ -119,22 +119,52 @@
           "builtin": "images"
         },
         {
-          "id": "poi-wikimedia",
+          "id": "wikimedia-commons-1",
           "question": {
-            "en": "Add Wikimedia Commons images",
-            "gd": "Cuir dealbhan Wikimedia Commons ris"
+            "en": "Add first Wikimedia Commons image",
+            "gd": "Cuir a' chiad dealbh Wikimedia Commons ris"
           },
           "freeform": {
-            "key": "wikimedia_commons"
+            "key": "wikimedia_commons_1"
           },
           "render": {
-            "en": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Wikimedia Commons Images:</strong><br/>Use format: File:Example.jpg, File:Photo.png<br/>Find images at: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}",
-            "gd": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Dealbhan Wikimedia Commons:</strong><br/>Cleachd cruth: File:Example.jpg, File:Photo.png<br/>Lorg dealbhan aig: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}"
+            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 1:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_1}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_1}</div>",
+            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 1:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_1}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_1}</div>"
           },
           "questionHint": {
-            "en": "Enter Wikimedia Commons file names like 'File:Example.jpg'. For multiple images, separate with commas.",
-            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan."
+            "en": "Enter Wikimedia Commons file name like 'File:Example.jpg'",
+            "gd": "Cuir a-steach ainm faidhle Wikimedia Commons leithid 'File:Example.jpg'"
           }
+        },
+        {
+          "id": "wikimedia-commons-2",
+          "question": {
+            "en": "Add second Wikimedia Commons image",
+            "gd": "Cuir an dàrna dealbh Wikimedia Commons ris"
+          },
+          "freeform": {
+            "key": "wikimedia_commons_2"
+          },
+          "render": {
+            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 2:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_2}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_2}</div>",
+            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 2:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_2}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_2}</div>"
+          },
+          "condition": "wikimedia_commons_1~*"
+        },
+        {
+          "id": "wikimedia-commons-3",
+          "question": {
+            "en": "Add third Wikimedia Commons image",
+            "gd": "Cuir an treas dealbh Wikimedia Commons ris"
+          },
+          "freeform": {
+            "key": "wikimedia_commons_3"
+          },
+          "render": {
+            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 3:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_3}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_3}</div>",
+            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 3:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_3}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_3}</div>"
+          },
+          "condition": "wikimedia_commons_2~*"
         },
         {
           "id": "external-links-header",
