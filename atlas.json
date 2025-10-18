@@ -42,10 +42,18 @@
       "pointRendering": [
         {
           "location": ["point"],
-          "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+          "icon": "{_first_image_thumbnail}",
           "iconSize": "40,40",
           "anchor": "center",
           "label": "{name}"
+        },
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
+          "iconSize": "40,40",
+          "anchor": "center",
+          "label": "{name}",
+          "condition": "_first_image_thumbnail="
         }
       ],
       "lineRendering": [
@@ -76,14 +84,11 @@
           "freeform": { 
             "key": "description",
             "type": "text",
-            "placeholder": {
-              "en": "Enter a detailed description...",
-              "gd": "Cuir a-steach tuairisgeul mionaideach..."
-            }
+            "maxLength": 7000
           },
           "questionHint": {
-            "en": "You can write up to 1000 words describing this location, its history, significance, or any other relevant information. There is no hard character limit enforced by the system.",
-            "gd": "Faodaidh tu suas ri 1000 facal a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach. Chan eil crìoch teann caractar air a chur an gnìomh leis an t-siostam."
+            "en": "You can write up to 1000 words describing this location, its history, significance, or any other relevant information.",
+            "gd": "Faodaidh tu suas ri 1000 facal a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
           },
           "render": { 
             "en": "<strong>Description:</strong><br/>{description}",
@@ -91,72 +96,41 @@
           }
         },
         {
-          "builtin": "images"
-        },
-        {
-          "id": "poi-image-url-1",
+          "builtin": "images",
+          "id": "images",
           "question": {
-            "en": "Add photo from website (paste image URL)",
-            "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
-          },
-          "freeform": {
-            "key": "image_url_1"
+            "en": "Add photos of this location",
+            "gd": "Cuir dealbhan den àite seo ris"
           },
           "render": {
-            "en": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
-          },
-          "questionHint": {
-            "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
-            "gd": "Gus dealbh a chur ris o làrach-lìn: 1) Dèan cliog deas air an dealbh agus tagh 'Dèan lethbhreac de sheòladh an deilbh', 2) Cuir an URL an seo (feumaidh e crìochnachadh ann an .jpg, .png, no .gif). Eisimpleir: https://example.com/photo.jpg"
+            "en": "<h3>Photos</h3>{images}",
+            "gd": "<h3>Dealbhan</h3>{images}"
           }
         },
         {
-          "id": "poi-image-url-2",
-          "question": {
-            "en": "Add another image URL",
-            "gd": "Cuir URL deilbh eile ris"
-          },
-          "freeform": {
-            "key": "image_url_2"
-          },
+          "id": "image-management",
           "render": {
-            "en": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+            "en": "<div style='border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; background: #f9f9f9;'><h4>📷 Photo Management</h4><p><strong>Current photos:</strong> {image_count}</p><p><em>To remove photos: Open the map in the MapComplete app and use the image management tools there.</em></p><p><strong>Thumbnail:</strong> The first uploaded photo will be used as the map icon for this location.</p></div>",
+            "gd": "<div style='border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; background: #f9f9f9;'><h4>📷 Stiùireadh Dealbhan</h4><p><strong>Dealbhan làithreach:</strong> {image_count}</p><p><em>Gus dealbhan a thoirt air falbh: Fosgail am mapa san aplacaid MapComplete agus cleachd na h-innealan stiùiridh deilbh an sin.</em></p><p><strong>Dealbh beag:</strong> Thèid a' chiad dealbh a chuir thu ris a chleachdadh mar ìomhaigh na mapa airson an àite seo.</p></div>"
           },
-          "condition": "image_url_1~*"
-        },
-        {
-          "id": "poi-image-url-3",
-          "question": {
-            "en": "Add another image URL",
-            "gd": "Cuir URL deilbh eile ris"
-          },
-          "freeform": {
-            "key": "image_url_3"
-          },
-          "render": {
-            "en": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
-          },
-          "condition": "image_url_2~*"
+          "condition": "image_count~*"
         },
         {
           "id": "poi-wikimedia",
           "question": {
-            "en": "Add Wikimedia Commons image names (comma-separated for multiple)",
-            "gd": "Cuir ainmean deilbh Wikimedia Commons ris (sgaraichte le cromagan)"
+            "en": "Add Wikimedia Commons images",
+            "gd": "Cuir dealbhan Wikimedia Commons ris"
           },
           "freeform": {
             "key": "wikimedia_commons"
           },
           "render": {
-            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
-            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
+            "en": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Wikimedia Commons Images:</strong><br/>Use format: File:Example.jpg, File:Photo.png<br/>Find images at: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}",
+            "gd": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Dealbhan Wikimedia Commons:</strong><br/>Cleachd cruth: File:Example.jpg, File:Photo.png<br/>Lorg dealbhan aig: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}"
           },
           "questionHint": {
-            "en": "Enter Wikimedia Commons file names (e.g., File:Example.jpg). For multiple images, separate with commas.",
-            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons (m.e., File:Example.jpg). Airson iomadh dealbh, sgaraich le cromagan."
+            "en": "Enter Wikimedia Commons file names like 'File:Example.jpg'. For multiple images, separate with commas. Visit commons.wikimedia.org to find images.",
+            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan. Tadhail air commons.wikimedia.org gus dealbhan a lorg."
           }
         },
         {
