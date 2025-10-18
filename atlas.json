@@ -93,26 +93,61 @@
         {
           "builtin": "images",
           "override": {
-            "id": "poi-photo"
+            "id": "poi-photo",
+            "render": {
+              "en": "{image_carousel()}{image_upload()}",
+              "gd": "{image_carousel()}{image_upload()}"
+            }
           }
         },
         {
           "id": "poi-image-urls",
           "question": {
-            "en": "Add image URLs from websites (comma-separated for multiple)",
-            "gd": "Cuir URLaichean deilbh ris o làraichean-lìn (sgaraichte le cromagan airson iomadh fear)"
+            "en": "Add photo from website (paste image URL)",
+            "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
           },
           "freeform": {
-            "key": "image:url"
+            "key": "image:0",
+            "addExtraTags": ["image:0={image:0}"]
           },
           "render": {
-            "en": "<strong>Image URLs:</strong> {image:url}",
-            "gd": "<strong>URLaichean Deilbh:</strong> {image:url}"
+            "en": "<img src='{image:0}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image:0}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
           },
           "questionHint": {
-            "en": "Enter full image URLs (e.g., https://example.com/image.jpg). For multiple images, separate with commas.",
-            "gd": "Cuir a-steach URLaichean deilbh slàn (m.e., https://example.com/image.jpg). Airson iomadh dealbh, sgaraich le cromagan."
+            "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
+            "gd": "Gus dealbh a chur ris o làrach-lìn: 1) Dèan cliog deas air an dealbh agus tagh 'Dèan lethbhreac de sheòladh an deilbh', 2) Cuir an URL an seo (feumaidh e crìochnachadh ann an .jpg, .png, no .gif). Eisimpleir: https://example.com/photo.jpg"
           }
+        },
+        {
+          "id": "poi-image-urls-2",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image:1"
+          },
+          "render": {
+            "en": "<img src='{image:1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image:1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image:0~*"
+        },
+        {
+          "id": "poi-image-urls-3",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image:2"
+          },
+          "render": {
+            "en": "<img src='{image:2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image:2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image:1~*"
         },
         {
           "id": "poi-wikimedia",
@@ -135,18 +170,44 @@
         {
           "id": "poi-url",
           "question": { 
-            "en": "Add website URLs (comma-separated for multiple)",
-            "gd": "Cuir URLaichean làraich-lìn ris (sgaraichte le cromagan)"
+            "en": "Add a website URL",
+            "gd": "Cuir URL làrach-lìn ris"
           },
           "freeform": { "key": "website" },
           "render": { 
-            "en": "<strong>Websites:</strong> {website}",
-            "gd": "<strong>Làraichean-lìn:</strong> {website}"
+            "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>",
+            "gd": "<strong>Làrach-lìn:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>"
           },
           "questionHint": {
-            "en": "Enter website URLs (e.g., https://example.com). For multiple websites, separate with commas or semicolons.",
-            "gd": "Cuir a-steach URLaichean làraich-lìn (m.e., https://example.com). Airson iomadh làrach-lìn, sgaraich le cromagan no leth-cholanan."
+            "en": "Enter a website URL (e.g., https://example.com)",
+            "gd": "Cuir a-steach URL làrach-lìn (m.e., https://example.com)"
           }
+        },
+        {
+          "id": "poi-url-2",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "contact:website" },
+          "render": { 
+            "en": "<strong>Website 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>",
+            "gd": "<strong>Làrach-lìn 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>"
+          },
+          "condition": "website~*"
+        },
+        {
+          "id": "poi-url-3",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "url" },
+          "render": { 
+            "en": "<strong>Website 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>",
+            "gd": "<strong>Làrach-lìn 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>"
+          },
+          "condition": "contact:website~*"
         },
         {
           "id": "poi-tags",
