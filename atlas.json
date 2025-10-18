@@ -1,10 +1,24 @@
 {
   "id": "atlas-test",
-  "title": { "en": "Atlas Points of Interest" },
-  "description": { "en": "Add points of interest with name, short description, photos, websites, tags, and an optional long description page." },
-  "welcomeMessage": { "en": "👋 Tap + to add a point of interest." },
+  "title": { 
+    "en": "Atlas Points of Interest"
+  },
+  "description": { 
+    "en": "Add points of interest with name, short description, photos, websites, tags, and an optional long description page."
+  },
+  "welcomeMessage": { 
+    "en": "👋 Tap + to add a point of interest."
+  },
   "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
   "startWithLayer": "poi",
+  "enableMoreQuests": true,
+  "enableAddNewPoints": true,
+  "enableGeolocation": true,
+  "enableLayers": true,
+  "enableSearch": true,
+  "enableUserBadge": true,
+  "enableShareScreen": true,
+  "enableMorePrivacy": false,
 
   "backgroundLayers": [
     {
@@ -42,6 +56,21 @@
           "condition": "_first_image_thumbnail="
         }
       ],
+      
+      "lineRendering": [
+        {
+          "color": "#00000000",
+          "width": 0
+        }
+      ],
+      
+      "areaRendering": [
+        {
+          "fillColor": "#00000000",
+          "strokeColor": "#00000000", 
+          "strokeWidth": 0
+        }
+      ],
 
       "tagRenderings": [
         {
@@ -62,7 +91,9 @@
           "freeform": { "key": "long_description_url" },
           "render": { "en": "<strong>Full description:</strong> <a href='{long_description_url}' target='_blank' rel='noopener'>open</a>" }
         },
-        { "builtin": "images" },
+        { 
+          "builtin": "images" 
+        },
         {
           "id": "poi-wikimedia",
           "question": { "en": "Add Wikimedia Commons file names" },
@@ -115,7 +146,9 @@
         {
           "title": { "en": "Add Point of Interest" },
           "tags": ["atlas_poi=yes", "name="],
-          "description": { "en": "Add a new point of interest to the map" }
+          "description": { "en": "Add a new point of interest to the map" },
+          "snapToLayer": [],
+          "maxSnapDistance": 0
         }
       ]
     }
