@@ -78,17 +78,16 @@
         {
           "id": "poi-description",
           "question": { 
-            "en": "Add a description (up to 1000 words)",
-            "gd": "Cuir tuairisgeul ris (suas ri 1000 facal)"
+            "en": "Add a description (up to 2000 words)",
+            "gd": "Cuir tuairisgeul ris (suas ri 2000 facal)"
           },
           "freeform": { 
             "key": "description",
-            "type": "text",
-            "maxLength": 7000
+            "type": "text"
           },
           "questionHint": {
-            "en": "You can write up to 1000 words describing this location, its history, significance, or any other relevant information.",
-            "gd": "Faodaidh tu suas ri 1000 facal a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
+            "en": "You can write up to 2000 words describing this location, its history, significance, or any other relevant information.",
+            "gd": "Faodaidh tu suas ri 2000 facal a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
           },
           "render": { 
             "en": "<strong>Description:</strong><br/>{description}",
@@ -108,12 +107,24 @@
           }
         },
         {
-          "id": "image-management",
-          "render": {
-            "en": "<div style='border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; background: #f9f9f9;'><h4>📷 Photo Management</h4><p><strong>Current photos:</strong> {image_count}</p><p><em>To remove photos: Open the map in the MapComplete app and use the image management tools there.</em></p><p><strong>Thumbnail:</strong> The first uploaded photo will be used as the map icon for this location.</p></div>",
-            "gd": "<div style='border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; background: #f9f9f9;'><h4>📷 Stiùireadh Dealbhan</h4><p><strong>Dealbhan làithreach:</strong> {image_count}</p><p><em>Gus dealbhan a thoirt air falbh: Fosgail am mapa san aplacaid MapComplete agus cleachd na h-innealan stiùiridh deilbh an sin.</em></p><p><strong>Dealbh beag:</strong> Thèid a' chiad dealbh a chuir thu ris a chleachdadh mar ìomhaigh na mapa airson an àite seo.</p></div>"
+          "id": "photo-reset",
+          "question": {
+            "en": "Reset all photos (delete all and start fresh)",
+            "gd": "Ath-shuidhich a h-uile dealbh (thoir air falbh iad uile agus tòisich bho thùs)"
           },
-          "condition": "image_count~*"
+          "render": {
+            "en": "<div style='border: 2px solid #dc3545; padding: 15px; margin: 15px 0; border-radius: 8px; background: #fff5f5;'>\n  <h4 style='color: #dc3545; margin-top: 0;'>⚠️ Photo Management</h4>\n  <p><strong>Current photos:</strong> {image_count}</p>\n  <p style='color: #dc3545;'><strong>Reset Option:</strong> If you have failed uploads or want to start over, you can remove all photos and upload them again.</p>\n  <div style='background: white; padding: 10px; border-radius: 4px; margin: 10px 0;'>\n    <strong>To reset photos:</strong>\n    <ol style='padding-left: 20px;'>\n      <li>Take note of which photos you want to keep</li>\n      <li>Click the question above to enable reset mode</li>\n      <li>Confirm you want to remove all photos</li>\n      <li>Re-upload the photos you want to keep</li>\n    </ol>\n  </div>\n</div>",
+            "gd": "<div style='border: 2px solid #dc3545; padding: 15px; margin: 15px 0; border-radius: 8px; background: #fff5f5;'>\n  <h4 style='color: #dc3545; margin-top: 0;'>⚠️ Stiùireadh Dealbhan</h4>\n  <p><strong>Dealbhan làithreach:</strong> {image_count}</p>\n  <p style='color: #dc3545;'><strong>Roghainn ath-shuidheachaidh:</strong> Ma tha luchdadh suas air fàilligeadh no ma tha thu airson tòiseachadh a-rithist, faodaidh tu na dealbhan uile a thoirt air falbh agus an luchdadh suas a-rithist.</p>\n  <div style='background: white; padding: 10px; border-radius: 4px; margin: 10px 0;'>\n    <strong>Gus dealbhan ath-shuidheachadh:</strong>\n    <ol style='padding-left: 20px;'>\n      <li>Thoir an aire dhe na dealbhan a tha thu airson a chumail</li>\n      <li>Briog air a' cheist gu h-àrd gus modh ath-shuidheachaidh a chur an gnìomh</li>\n      <li>Dearbha gu bheil thu airson a h-uile dealbh a thoirt air falbh</li>\n      <li>Luchd suas na dealbhan a tha thu airson a chumail a-rithist</li>\n    </ol>\n  </div>\n</div>"
+          },
+          "freeform": {
+            "key": "reset_photos",
+            "type": "text"
+          },
+          "condition": "image_count>0",
+          "questionHint": {
+            "en": "⚠️ WARNING: This will remove ALL photos from this location. Type 'DELETE ALL PHOTOS' to confirm. Make sure you have backups of any photos you want to keep.",
+            "gd": "⚠️ RABHADH: Bheir seo air falbh a h-uile dealbh bhon àite seo. Taip 'THOIR AIR FALBH A H-UILE DEALBH' gus dearbhadh. Dèan cinnteach gu bheil dùblaidean agad de na dealbhan a tha thu airson a chumail."
+          }
         },
         {
           "id": "poi-wikimedia",
