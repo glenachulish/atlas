@@ -1,10 +1,27 @@
 {
   "id": "atlas-test",
-  "title": { "en": "Atlas Points of Interest" },
-  "description": { "en": "Add points of interest with name, description, photo, URL, and tags." },
-  "welcomeMessage": { "en": "👋 Tap + to add a point of interest." },
+  "title": { 
+    "en": "Atlas Points of Interest",
+    "gd": "Atlas Puingean Ùidh"
+  },
+  "description": { 
+    "en": "Add points of interest with name, description, photo, URL, and tags. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>View instructions</a>",
+    "gd": "Cuir puingean ùidh ris le ainm, tuairisgeul, dealbh, URL, agus tagaichean. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>Seall stiùireadh</a>"
+  },
+  "welcomeMessage": { 
+    "en": "👋 Tap + to add a point of interest. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>Need help?</a>",
+    "gd": "👋 Thoir gnogag air + gus puing ùidh a chur ris. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>A bheil feum air taic?</a>"
+  },
   "icon": "https://glenachulish.github.io/atlas/icons/atlas_castle.svg",
   "startWithLayer": "poi",
+  "enableMoreQuests": true,
+  "enableAddNewPoints": true,
+  "enableGeolocation": true,
+  "enableLayers": true,
+  "enableSearch": true,
+  "enableUserBadge": true,
+  "enableShareScreen": true,
+  "enableMorePrivacy": false,
   "backgroundLayers": [
     {
       "id": "osm-default",
@@ -40,15 +57,34 @@
       "tagRenderings": [
         {
           "id": "poi-name",
-          "question": { "en": "What is this place called?" },
+          "question": { 
+            "en": "What is this place called?",
+            "gd": "Dè an t-ainm a th' air an àite seo?"
+          },
           "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}" }
+          "render": { 
+            "en": "<strong>Name:</strong> {name}",
+            "gd": "<strong>Ainm:</strong> {name}"
+          }
         },
         {
           "id": "poi-description",
-          "question": { "en": "Add a short description" },
-          "freeform": { "key": "description" },
-          "render": { "en": "Description: {description}" }
+          "question": { 
+            "en": "Add a short description",
+            "gd": "Cuir tuairisgeul goirid ris"
+          },
+          "freeform": { 
+            "key": "description",
+            "type": "text",
+            "placeholder": {
+              "en": "Describe this place (up to 1000 words)",
+              "gd": "Thoir cunntas air an àite seo (suas ri 1000 facal)"
+            }
+          },
+          "render": { 
+            "en": "<strong>Description:</strong> {description}",
+            "gd": "<strong>Tuairisgeul:</strong> {description}"
+          }
         },
         {
           "builtin": "images",
@@ -58,22 +94,40 @@
         },
         {
           "id": "poi-url",
-          "question": { "en": "Add a website URL" },
+          "question": { 
+            "en": "Add a website URL",
+            "gd": "Cuir URL làrach-lìn ris"
+          },
           "freeform": { "key": "website" },
-          "render": { "en": "<a href='{website}' target='_blank' rel='noopener'>Visit Website</a>" }
+          "render": { 
+            "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>",
+            "gd": "<strong>Làrach-lìn:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>"
+          }
         },
         {
           "id": "poi-tags",
-          "question": { "en": "Add tags (e.g. geology, nature)" },
+          "question": { 
+            "en": "Add tags (e.g. geology, nature)",
+            "gd": "Cuir tagaichean ris (m.e. geòlas, nàdar)"
+          },
           "freeform": { "key": "tags" },
-          "render": { "en": "Tags: {tags}" }
+          "render": { 
+            "en": "<strong>Tags:</strong> {tags}",
+            "gd": "<strong>Tagaichean:</strong> {tags}"
+          }
         }
       ],
       "presets": [
         {
-          "title": { "en": "Add Point of Interest" },
+          "title": { 
+            "en": "Add Point of Interest",
+            "gd": "Cuir Puing Ùidh Ris"
+          },
           "tags": ["atlas_poi=yes"],
-          "description": { "en": "Add a new point of interest to the map" }
+          "description": { 
+            "en": "Add a new point of interest to the map",
+            "gd": "Cuir puing ùidh ùr ris a' mhapa"
+          }
         }
       ]
     }
