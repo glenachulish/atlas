@@ -1,13 +1,42 @@
 {
   "id": "atlas-test",
-  "title": { "en": "Atlas Points of Interest" },
-  "description": { "en": "Add points of interest to the map" },
+  "title": { 
+    "en": "Atlas Points of Interest",
+    "gd": "Atlas Puingean Ùidh"
+  },
+  "description": { 
+    "en": "Add points of interest with name, description, photo, URL, and tags. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>View instructions</a>",
+    "gd": "Cuir puingean ùidh ris le ainm, tuairisgeul, dealbh, URL, agus tagaichean. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>Seall stiùireadh</a>"
+  },
+  "welcomeMessage": { 
+    "en": "👋 Tap + to add a point of interest. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>Need help?</a>",
+    "gd": "👋 Thoir gnogag air + gus puing ùidh a chur ris. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>A bheil feum air taic?</a>"
+  },
   "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
+  "startWithLayer": "poi",
+  "enableMoreQuests": true,
+  "enableAddNewPoints": true,
+  "enableGeolocation": true,
+  "enableLayers": true,
+  "enableSearch": true,
+  "enableUserBadge": true,
+  "enableShareScreen": true,
+  "enableMorePrivacy": false,
+
+  "backgroundLayers": [
+    {
+      "id": "osm-default",
+      "name": { "en": "OpenStreetMap" },
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "attribution": "© OpenStreetMap contributors",
+      "maxZoom": 19
+    }
+  ],
 
   "layers": [
     {
       "id": "poi",
-      "name": { "en": "Points of Interest" },
+      "name": { "en": "Point of Interest" },
       "source": { "osmTags": "atlas_poi=yes", "geometry": "point" },
       "title": { "en": "{name}" },
       "allowAdd": true,
@@ -16,10 +45,18 @@
       "pointRendering": [
         {
           "location": ["point"],
-          "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
+          "icon": "{_first_image_thumbnail}",
           "iconSize": "40,40",
           "anchor": "center",
           "label": "{name}"
+        },
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
+          "iconSize": "40,40",
+          "anchor": "center",
+          "label": "{name}",
+          "condition": "_first_image_thumbnail="
         }
       ],
       "lineRendering": [
@@ -32,21 +69,150 @@
       "tagRenderings": [
         {
           "id": "poi-name",
-          "question": { "en": "What is the name?" },
+          "question": { 
+            "en": "What is this place called?",
+            "gd": "Dè an t-ainm a th' air an àite seo?"
+          },
           "freeform": { "key": "name" },
-          "render": { "en": "Name: {name}" }
+          "render": { 
+            "en": "<strong>Name:</strong> {name}",
+            "gd": "<strong>Ainm:</strong> {name}"
+          }
+        },
+        {
+          "id": "poi-description",
+          "question": { 
+            "en": "Add a description",
+            "gd": "Cuir tuairisgeul ris"
+          },
+          "freeform": { 
+            "key": "description",
+            "type": "text"
+          },
+          "questionHint": {
+            "en": "You can write a description of this location, its history, significance, or any other relevant information.",
+            "gd": "Faodaidh tu tuairisgeul a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
+          },
+          "render": { 
+            "en": "<strong>Description:</strong><br/>{description}",
+            "gd": "<strong>Tuairisgeul:</strong><br/>{description}"
+          }
         },
         {
           "id": "poi-images",
           "builtin": "images"
+        },
+        {
+          "id": "poi-wikimedia",
+          "question": {
+            "en": "Add Wikimedia Commons images",
+            "gd": "Cuir dealbhan Wikimedia Commons ris"
+          },
+          "freeform": {
+            "key": "wikimedia_commons"
+          },
+          "render": {
+            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
+            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
+          },
+          "questionHint": {
+            "en": "Enter Wikimedia Commons file names like 'File:Example.jpg'. For multiple images, separate with commas.",
+            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan."
+          }
+        },
+        {
+          "id": "poi-url",
+          "question": { 
+            "en": "Add a website URL",
+            "gd": "Cuir URL làrach-lìn ris"
+          },
+          "freeform": { "key": "website" },
+          "render": { 
+            "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>",
+            "gd": "<strong>Làrach-lìn:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>"
+          },
+          "questionHint": {
+            "en": "Enter a website URL (e.g., https://example.com)",
+            "gd": "Cuir a-steach URL làrach-lìn (m.e., https://example.com)"
+          }
+        },
+        {
+          "id": "poi-url-2",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "contact:website" },
+          "render": { 
+            "en": "<strong>Website 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>",
+            "gd": "<strong>Làrach-lìn 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>"
+          },
+          "condition": "website~*"
+        },
+        {
+          "id": "poi-url-3",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "url" },
+          "render": { 
+            "en": "<strong>Website 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>",
+            "gd": "<strong>Làrach-lìn 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>"
+          },
+          "condition": "contact:website~*"
+        },
+        {
+          "id": "poi-url-4",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "source:url" },
+          "render": { 
+            "en": "<strong>Website 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>",
+            "gd": "<strong>Làrach-lìn 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>"
+          },
+          "condition": "url~*"
+        },
+        {
+          "id": "poi-url-5",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "ref:url" },
+          "render": { 
+            "en": "<strong>Website 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>",
+            "gd": "<strong>Làrach-lìn 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>"
+          },
+          "condition": "source:url~*"
+        },
+        {
+          "id": "poi-tags",
+          "question": { 
+            "en": "Add tags (e.g. geology, nature)",
+            "gd": "Cuir tagaichean ris (m.e. geòlas, nàdar)"
+          },
+          "freeform": { "key": "tags" },
+          "render": { 
+            "en": "<strong>Tags:</strong> {tags}",
+            "gd": "<strong>Tagaichean:</strong> {tags}"
+          }
         }
       ],
 
       "presets": [
         {
-          "title": { "en": "Add POI" },
+          "title": { 
+            "en": "Add Point of Interest",
+            "gd": "Cuir Puing Ùidh Ris"
+          },
           "tags": ["atlas_poi=yes"],
-          "description": { "en": "Add a point of interest" }
+          "description": { 
+            "en": "Add a new point of interest to the map",
+            "gd": "Cuir puing ùidh ùr ris a' mhapa"
+          }
         }
       ]
     }
