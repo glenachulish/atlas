@@ -90,32 +90,69 @@
           "builtin": "images"
         },
         {
-          "id": "poi-wikimedia-helper",
+          "id": "poi-image-url-1",
           "question": {
-            "en": "Add Wikimedia Commons images",
-            "gd": "Cuir dealbhan Wikimedia Commons ris"
+            "en": "Add photo from website (paste image URL)",
+            "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
+          },
+          "freeform": {
+            "key": "image_url_1"
           },
           "render": {
-            "en": "<div style='border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f9f9f9;'>\n  <h4 style='margin-top: 0;'>📷 Wikimedia Commons Images</h4>\n  <p><strong>Easy way to find images:</strong></p>\n  <ol style='padding-left: 20px;'>\n    <li>Go to <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></li>\n    <li>Search for your topic (e.g., \"Scottish castle\", \"Highland landscape\")</li>\n    <li>Copy the <strong>exact file name</strong> (starts with \"File:\")</li>\n    <li>Paste it in the field below</li>\n    <li>Add multiple files separated by commas</li>\n  </ol>\n  <p><em>Example: File:Eilean Donan Castle.jpg, File:Scottish highlands landscape.jpg</em></p>\n  <div style='background: white; padding: 10px; border-radius: 4px; margin-top: 10px;'>\n    <strong>Selected Wikimedia files will appear here:</strong>\n    <div id='wikimedia-preview' style='margin-top: 10px;'></div>\n  </div>\n</div>\n<script>\n// Simple preview of Wikimedia Commons images\nfunction updateWikimediaPreview() {\n  const field = document.querySelector('[data-tag-key=\"wikimedia_commons\"] input');\n  const preview = document.getElementById('wikimedia-preview');\n  \n  if (field && field.value) {\n    const files = field.value.split(',').map(f => f.trim()).filter(f => f);\n    preview.innerHTML = files.map(file => {\n      const cleanName = file.replace('File:', '');\n      const thumbUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(cleanName)}?width=100`;\n      return `<div style='display: inline-block; margin: 5px; text-align: center;'>\n        <img src=\"${thumbUrl}\" style='width: 80px; height: 60px; object-fit: cover; border-radius: 4px;' onerror=\"this.style.display='none'\">\n        <div style='font-size: 10px; max-width: 80px; overflow: hidden; text-overflow: ellipsis;'>${cleanName}</div>\n      </div>`;\n    }).join('');\n  } else {\n    preview.innerHTML = '<em style=\"color: #666;\">No images selected yet</em>';\n  }\n}\n\n// Update preview when field changes\ndocument.addEventListener('input', function(e) {\n  if (e.target && e.target.closest('[data-tag-key=\"wikimedia_commons\"]')) {\n    setTimeout(updateWikimediaPreview, 100);\n  }\n});\n\n// Initial update\nsetTimeout(updateWikimediaPreview, 500);\n</script>",
-            "gd": "<div style='border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f9f9f9;'>\n  <h4 style='margin-top: 0;'>📷 Dealbhan Wikimedia Commons</h4>\n  <p><strong>Dòigh furasta air dealbhan a lorg:</strong></p>\n  <ol style='padding-left: 20px;'>\n    <li>Rach gu <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></li>\n    <li>Lorg an cuspair agad (m.e., \"caisteal Albannach\", \"cruth-tìre Gàidhealach\")</li>\n    <li>Dèan lethbhreac dhen <strong>ainm faidhle ceart</strong> (a' tòiseachadh le \"File:\")</li>\n    <li>Cuir e sa raon gu h-ìosal</li>\n    <li>Cuir iomadh faidhle ris le cromagan gan sgaradh</li>\n  </ol>\n  <p><em>Eisimpleir: File:Eilean Donan Castle.jpg, File:Scottish highlands landscape.jpg</em></p>\n  <div style='background: white; padding: 10px; border-radius: 4px; margin-top: 10px;'>\n    <strong>Nochdaidh faidhlichean Wikimedia Commons taghte an seo:</strong>\n    <div id='wikimedia-preview' style='margin-top: 10px;'></div>\n  </div>\n</div>\n<script>\n// Simple preview of Wikimedia Commons images\nfunction updateWikimediaPreview() {\n  const field = document.querySelector('[data-tag-key=\"wikimedia_commons\"] input');\n  const preview = document.getElementById('wikimedia-preview');\n  \n  if (field && field.value) {\n    const files = field.value.split(',').map(f => f.trim()).filter(f => f);\n    preview.innerHTML = files.map(file => {\n      const cleanName = file.replace('File:', '');\n      const thumbUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(cleanName)}?width=100`;\n      return `<div style='display: inline-block; margin: 5px; text-align: center;'>\n        <img src=\"${thumbUrl}\" style='width: 80px; height: 60px; object-fit: cover; border-radius: 4px;' onerror=\"this.style.display='none'\">\n        <div style='font-size: 10px; max-width: 80px; overflow: hidden; text-overflow: ellipsis;'>${cleanName}</div>\n      </div>`;\n    }).join('');\n  } else {\n    preview.innerHTML = '<em style=\"color: #666;\">Cha deach dealbh a thaghadh fhathast</em>';\n  }\n}\n\n// Update preview when field changes\ndocument.addEventListener('input', function(e) {\n  if (e.target && e.target.closest('[data-tag-key=\"wikimedia_commons\"]')) {\n    setTimeout(updateWikimediaPreview, 100);\n  }\n});\n\n// Initial update\nsetTimeout(updateWikimediaPreview, 500);\n</script>"
+            "en": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "questionHint": {
+            "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
+            "gd": "Gus dealbh a chur ris o làrach-lìn: 1) Dèan cliog deas air an dealbh agus tagh 'Dèan lethbhreac de sheòladh an deilbh', 2) Cuir an URL an seo (feumaidh e crìochnachadh ann an .jpg, .png, no .gif). Eisimpleir: https://example.com/photo.jpg"
           }
+        },
+        {
+          "id": "poi-image-url-2",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image_url_2"
+          },
+          "render": {
+            "en": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image_url_1~*"
+        },
+        {
+          "id": "poi-image-url-3",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image_url_3"
+          },
+          "render": {
+            "en": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image_url_2~*"
         },
         {
           "id": "poi-wikimedia",
           "question": {
-            "en": "Enter Wikimedia Commons file names (comma-separated)",
-            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons (sgaraichte le cromagan)"
+            "en": "Add Wikimedia Commons image names (comma-separated for multiple)",
+            "gd": "Cuir ainmean deilbh Wikimedia Commons ris (sgaraichte le cromagan)"
           },
           "freeform": {
             "key": "wikimedia_commons"
           },
           "render": {
-            "en": "<strong>Wikimedia Commons Images:</strong><br/>{wikimedia_commons}",
-            "gd": "<strong>Dealbhan Wikimedia Commons:</strong><br/>{wikimedia_commons}"
+            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
+            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
           },
           "questionHint": {
-            "en": "Enter Wikimedia Commons file names like 'File:Example.jpg'. For multiple images, separate with commas. Use the helper above to easily find and preview images.",
-            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan. Cleachd an neach-cuideachaidh gu h-àrd gus dealbhan a lorg agus ro-shealladh fhaicinn."
+            "en": "Enter Wikimedia Commons file names (e.g., File:Example.jpg). For multiple images, separate with commas.",
+            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons (m.e., File:Example.jpg). Airson iomadh dealbh, sgaraich le cromagan."
           }
         },
         {
