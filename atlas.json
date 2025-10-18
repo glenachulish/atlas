@@ -107,8 +107,7 @@
             "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
           },
           "freeform": {
-            "key": "image:0",
-            "addExtraTags": ["image:0={image:0}"]
+            "key": "image:0"
           },
           "render": {
             "en": "<img src='{image:0}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
