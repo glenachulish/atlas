@@ -1,30 +1,31 @@
 {
   "id": "atlas-test",
-  "title": { "en": "Atlas" },
-  "description": { "en": "Add points of interest" },
+  "title": { "en": "Atlas Points of Interest" },
+  "description": { "en": "Add points of interest to the map" },
   "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
   
   "layers": [
     {
       "id": "poi",
-      "name": { "en": "POIs" },
+      "name": { "en": "Points of Interest" },
       "source": { "osmTags": "atlas_poi=yes" },
       "tagRenderings": [
         {
           "id": "name",
-          "question": { "en": "Name?" },
+          "question": { "en": "What is the name of this place?" },
           "freeform": { "key": "name" },
-          "render": { "en": "<strong>Name:</strong> {name}" }
+          "render": { "en": "<h3>{name}</h3>" }
         },
         {
-          "builtin": "images"
+          "builtin": "images",
+          "id": "photos"
         }
       ],
       "presets": [
         {
-          "title": { "en": "Add POI" },
+          "title": { "en": "Add Point of Interest" },
           "tags": ["atlas_poi=yes"],
-          "description": { "en": "Add a point of interest" }
+          "description": { "en": "Create a new point of interest" }
         }
       ]
     }
