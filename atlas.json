@@ -13,7 +13,8 @@
         {
           "id": "name",
           "question": { "en": "Name?" },
-          "freeform": { "key": "name" }
+          "freeform": { "key": "name" },
+          "render": { "en": "<strong>Name:</strong> {name}" }
         },
         {
           "builtin": "images"
@@ -22,7 +23,8 @@
       "presets": [
         {
           "title": { "en": "Add POI" },
-          "tags": { "atlas_poi": "yes" }
+          "tags": ["atlas_poi=yes"],
+          "description": { "en": "Add a point of interest" }
         }
       ]
     }
