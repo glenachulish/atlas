@@ -95,16 +95,14 @@
           }
         },
         {
-          "builtin": "images",
-          "id": "images",
-          "question": {
-            "en": "Add photos of this location",
-            "gd": "Cuir dealbhan den àite seo ris"
-          },
+          "id": "photos-header",
           "render": {
-            "en": "<h3>Photos</h3>{images}",
-            "gd": "<h3>Dealbhan</h3>{images}"
+            "en": "<h3>Photos</h3><p>Add photos of this location. The first photo will be used as the map thumbnail.</p>",
+            "gd": "<h3>Dealbhan</h3><p>Cuir dealbhan den àite seo ris. Thèid a' chiad dealbh a chleachdadh mar dhealbh beag na mapa.</p>"
           }
+        },
+        {
+          "builtin": "images"
         },
         {
           "id": "photo-reset",
