@@ -90,221 +90,69 @@
           "builtin": "images"
         },
         {
-          "id": "poi-wikimedia-search",
+          "id": "poi-image-url-1",
           "question": {
-            "en": "Search and add Wikimedia Commons images",
-            "gd": "Lorg agus cuir dealbhan Wikimedia Commons ris"
+            "en": "Add photo from website (paste image URL)",
+            "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
+          },
+          "freeform": {
+            "key": "image_url_1"
           },
           "render": {
-            "en": `<div class="wikimedia-search">
-              <h4>Wikimedia Commons Images</h4>
-              <div style="margin: 10px 0;">
-                <input type="text" id="wikimedia-search-input" placeholder="Search for images (e.g., Scottish castle, Highland landscape)" style="width: 100%; padding: 8px; margin-bottom: 10px;">
-                <button onclick="searchWikimedia()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">Search Wikimedia</button>
-              </div>
-              <div id="wikimedia-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 15px 0;"></div>
-              <div id="selected-wikimedia" style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>Selected Images:</strong>
-                <div id="selected-images-list"></div>
-              </div>
-              <input type="hidden" id="wikimedia_commons" name="wikimedia_commons" value="{wikimedia_commons}">
-            </div>
-            <script>
-              let selectedWikimediaImages = [];
-              
-              function searchWikimedia() {
-                const query = document.getElementById('wikimedia-search-input').value;
-                const resultsDiv = document.getElementById('wikimedia-results');
-                resultsDiv.innerHTML = '<p>Searching...</p>';
-                
-                // Simple Wikimedia API search
-                fetch('https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=12&prop=imageinfo&iiprop=url&iiurlwidth=200&origin=*')
-                  .then(response => response.json())
-                  .then(data => {
-                    resultsDiv.innerHTML = '';
-                    if (data.query && data.query.pages) {
-                      Object.values(data.query.pages).forEach(page => {
-                        const thumbUrl = page.imageinfo[0].thumburl;
-                        const fullUrl = page.imageinfo[0].url;
-                        const title = page.title;
-                        
-                        const imgDiv = document.createElement('div');
-                        imgDiv.style.cursor = 'pointer';
-                        imgDiv.style.textAlign = 'center';
-                        imgDiv.onclick = () => selectWikimediaImage(title, thumbUrl);
-                        imgDiv.innerHTML = '
-                          <img src="' + thumbUrl + '" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px;">
-                          <div style="font-size: 12px; margin-top: 5px; overflow: hidden; text-overflow: ellipsis;">' + title.replace('File:', '') + '</div>
-                        ';
-                        resultsDiv.appendChild(imgDiv);
-                      });
-                    } else {
-                      resultsDiv.innerHTML = '<p>No images found. Try a different search term.</p>';
-                    }
-                  })
-                  .catch(error => {
-                    resultsDiv.innerHTML = '<p>Error searching. You can manually enter file names below.</p>';
-                  });
-              }
-              
-              function selectWikimediaImage(title, thumbUrl) {
-                if (!selectedWikimediaImages.includes(title)) {
-                  selectedWikimediaImages.push(title);
-                  updateSelectedImagesList();
-                  document.getElementById('wikimedia_commons').value = selectedWikimediaImages.join(', ');
-                  
-                  // Trigger MapComplete save
-                  const event = new Event('change', { bubbles: true });
-                  document.getElementById('wikimedia_commons').dispatchEvent(event);
-                }
-              }
-              
-              function removeWikimediaImage(index) {
-                selectedWikimediaImages.splice(index, 1);
-                updateSelectedImagesList();
-                document.getElementById('wikimedia_commons').value = selectedWikimediaImages.join(', ');
-                
-                // Trigger MapComplete save
-                const event = new Event('change', { bubbles: true });
-                document.getElementById('wikimedia_commons').dispatchEvent(event);
-              }
-              
-              function updateSelectedImagesList() {
-                const listDiv = document.getElementById('selected-images-list');
-                listDiv.innerHTML = '';
-                
-                selectedWikimediaImages.forEach((image, index) => {
-                  const imgItem = document.createElement('div');
-                  imgItem.style.display = 'flex';
-                  imgItem.style.alignItems = 'center';
-                  imgItem.style.margin = '5px 0';
-                  imgItem.style.padding = '5px';
-                  imgItem.style.background = 'white';
-                  imgItem.style.borderRadius = '4px';
-                  imgItem.innerHTML = '
-                    <span style="flex: 1; font-size: 12px;">' + image.replace('File:', '') + '</span>
-                    <button onclick="removeWikimediaImage(' + index + ')" style="margin-left: 10px; padding: 2px 8px; background: #dc3545; color: white; border: none; border-radius: 3px; font-size: 12px;">Remove</button>
-                  ';
-                  listDiv.appendChild(imgItem);
-                });
-                
-                if (selectedWikimediaImages.length === 0) {
-                  listDiv.innerHTML = '<p style="margin: 0; font-style: italic; color: #666;">No images selected yet</p>';
-                }
-              }
-              
-              // Load existing images on render
-              if ('{wikimedia_commons}' && '{wikimedia_commons}' !== 'undefined') {
-                selectedWikimediaImages = '{wikimedia_commons}'.split(',').map(img => img.trim()).filter(img => img);
-                updateSelectedImagesList();
-              }
-            </script>`,
-            "gd": `<div class="wikimedia-search">
-              <h4>Dealbhan Wikimedia Commons</h4>
-              <div style="margin: 10px 0;">
-                <input type="text" id="wikimedia-search-input" placeholder="Lorg dealbhan (m.e., caisteal Albannach, cruth-tìre Gàidhealach)" style="width: 100%; padding: 8px; margin-bottom: 10px;">
-                <button onclick="searchWikimedia()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">Lorg Wikimedia</button>
-              </div>
-              <div id="wikimedia-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 15px 0;"></div>
-              <div id="selected-wikimedia" style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>Dealbhan taghte:</strong>
-                <div id="selected-images-list"></div>
-              </div>
-              <input type="hidden" id="wikimedia_commons" name="wikimedia_commons" value="{wikimedia_commons}">
-            </div>
-            <script>
-              let selectedWikimediaImages = [];
-              
-              function searchWikimedia() {
-                const query = document.getElementById('wikimedia-search-input').value;
-                const resultsDiv = document.getElementById('wikimedia-results');
-                resultsDiv.innerHTML = '<p>A\' lorg...</p>';
-                
-                // Simple Wikimedia API search
-                fetch('https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=12&prop=imageinfo&iiprop=url&iiurlwidth=200&origin=*')
-                  .then(response => response.json())
-                  .then(data => {
-                    resultsDiv.innerHTML = '';
-                    if (data.query && data.query.pages) {
-                      Object.values(data.query.pages).forEach(page => {
-                        const thumbUrl = page.imageinfo[0].thumburl;
-                        const fullUrl = page.imageinfo[0].url;
-                        const title = page.title;
-                        
-                        const imgDiv = document.createElement('div');
-                        imgDiv.style.cursor = 'pointer';
-                        imgDiv.style.textAlign = 'center';
-                        imgDiv.onclick = () => selectWikimediaImage(title, thumbUrl);
-                        imgDiv.innerHTML = '
-                          <img src="' + thumbUrl + '" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px;">
-                          <div style="font-size: 12px; margin-top: 5px; overflow: hidden; text-overflow: ellipsis;">' + title.replace('File:', '') + '</div>
-                        ';
-                        resultsDiv.appendChild(imgDiv);
-                      });
-                    } else {
-                      resultsDiv.innerHTML = '<p>Cha deach dealbh a lorg. Feuch facal-lorg eile.</p>';
-                    }
-                  })
-                  .catch(error => {
-                    resultsDiv.innerHTML = '<p>Mearachd a\' lorg. Faodaidh tu ainmean faidhle a chur a-steach le làmh.</p>';
-                  });
-              }
-              
-              function selectWikimediaImage(title, thumbUrl) {
-                if (!selectedWikimediaImages.includes(title)) {
-                  selectedWikimediaImages.push(title);
-                  updateSelectedImagesList();
-                  document.getElementById('wikimedia_commons').value = selectedWikimediaImages.join(', ');
-                  
-                  // Trigger MapComplete save
-                  const event = new Event('change', { bubbles: true });
-                  document.getElementById('wikimedia_commons').dispatchEvent(event);
-                }
-              }
-              
-              function removeWikimediaImage(index) {
-                selectedWikimediaImages.splice(index, 1);
-                updateSelectedImagesList();
-                document.getElementById('wikimedia_commons').value = selectedWikimediaImages.join(', ');
-                
-                // Trigger MapComplete save
-                const event = new Event('change', { bubbles: true });
-                document.getElementById('wikimedia_commons').dispatchEvent(event);
-              }
-              
-              function updateSelectedImagesList() {
-                const listDiv = document.getElementById('selected-images-list');
-                listDiv.innerHTML = '';
-                
-                selectedWikimediaImages.forEach((image, index) => {
-                  const imgItem = document.createElement('div');
-                  imgItem.style.display = 'flex';
-                  imgItem.style.alignItems = 'center';
-                  imgItem.style.margin = '5px 0';
-                  imgItem.style.padding = '5px';
-                  imgItem.style.background = 'white';
-                  imgItem.style.borderRadius = '4px';
-                  imgItem.innerHTML = '
-                    <span style="flex: 1; font-size: 12px;">' + image.replace('File:', '') + '</span>
-                    <button onclick="removeWikimediaImage(' + index + ')" style="margin-left: 10px; padding: 2px 8px; background: #dc3545; color: white; border: none; border-radius: 3px; font-size: 12px;">Thoir air falbh</button>
-                  ';
-                  listDiv.appendChild(imgItem);
-                });
-                
-                if (selectedWikimediaImages.length === 0) {
-                  listDiv.innerHTML = '<p style="margin: 0; font-style: italic; color: #666;">Cha deach dealbh a thaghadh fhathast</p>';
-                }
-              }
-              
-              // Load existing images on render
-              if ('{wikimedia_commons}' && '{wikimedia_commons}' !== 'undefined') {
-                selectedWikimediaImages = '{wikimedia_commons}'.split(',').map(img => img.trim()).filter(img => img);
-                updateSelectedImagesList();
-              }
-            </script>`
+            "en": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "questionHint": {
+            "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
+            "gd": "Gus dealbh a chur ris o làrach-lìn: 1) Dèan cliog deas air an dealbh agus tagh 'Dèan lethbhreac de sheòladh an deilbh', 2) Cuir an URL an seo (feumaidh e crìochnachadh ann an .jpg, .png, no .gif). Eisimpleir: https://example.com/photo.jpg"
+          }
+        },
+        {
+          "id": "poi-image-url-2",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image_url_2"
+          },
+          "render": {
+            "en": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image_url_1~*"
+        },
+        {
+          "id": "poi-image-url-3",
+          "question": {
+            "en": "Add another image URL",
+            "gd": "Cuir URL deilbh eile ris"
+          },
+          "freeform": {
+            "key": "image_url_3"
+          },
+          "render": {
+            "en": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+          },
+          "condition": "image_url_2~*"
+        },
+        {
+          "id": "poi-wikimedia",
+          "question": {
+            "en": "Add Wikimedia Commons image names (comma-separated for multiple)",
+            "gd": "Cuir ainmean deilbh Wikimedia Commons ris (sgaraichte le cromagan)"
           },
           "freeform": {
             "key": "wikimedia_commons"
+          },
+          "render": {
+            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
+            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
+          },
+          "questionHint": {
+            "en": "Enter Wikimedia Commons file names (e.g., File:Example.jpg). For multiple images, separate with commas.",
+            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons (m.e., File:Example.jpg). Airson iomadh dealbh, sgaraich le cromagan."
           }
         },
         {
