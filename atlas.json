@@ -138,54 +138,6 @@
           "condition": "image_url_2~*"
         },
         {
-          "id": "poi-image-url-1",
-          "question": {
-            "en": "Add photo from website (paste image URL)",
-            "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
-          },
-          "freeform": {
-            "key": "image_url_1"
-          },
-          "render": {
-            "en": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
-          },
-          "questionHint": {
-            "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
-            "gd": "Gus dealbh a chur ris o làrach-lìn: 1) Dèan cliog deas air an dealbh agus tagh 'Dèan lethbhreac de sheòladh an deilbh', 2) Cuir an URL an seo (feumaidh e crìochnachadh ann an .jpg, .png, no .gif). Eisimpleir: https://example.com/photo.jpg"
-          }
-        },
-        {
-          "id": "poi-image-url-2",
-          "question": {
-            "en": "Add another image URL",
-            "gd": "Cuir URL deilbh eile ris"
-          },
-          "freeform": {
-            "key": "image_url_2"
-          },
-          "render": {
-            "en": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
-          },
-          "condition": "image_url_1~*"
-        },
-        {
-          "id": "poi-image-url-3",
-          "question": {
-            "en": "Add another image URL",
-            "gd": "Cuir URL deilbh eile ris"
-          },
-          "freeform": {
-            "key": "image_url_3"
-          },
-          "render": {
-            "en": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
-          },
-          "condition": "image_url_2~*"
-        },
-        {
           "id": "poi-wikimedia",
           "question": {
             "en": "Add Wikimedia Commons image names (comma-separated for multiple)",
@@ -246,6 +198,32 @@
           "condition": "contact:website~*"
         },
         {
+          "id": "poi-url-4",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "source:url" },
+          "render": { 
+            "en": "<strong>Website 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>",
+            "gd": "<strong>Làrach-lìn 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>"
+          },
+          "condition": "url~*"
+        },
+        {
+          "id": "poi-url-5",
+          "question": { 
+            "en": "Add another website URL",
+            "gd": "Cuir URL làrach-lìn eile ris"
+          },
+          "freeform": { "key": "ref:url" },
+          "render": { 
+            "en": "<strong>Website 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>",
+            "gd": "<strong>Làrach-lìn 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>"
+          },
+          "condition": "source:url~*"
+        },
+        {
           "id": "poi-tags",
           "question": { 
             "en": "Add tags (e.g. geology, nature)",
@@ -264,11 +242,13 @@
             "en": "Add Point of Interest",
             "gd": "Cuir Puing Ùidh Ris"
           },
-          "tags": ["atlas_poi=yes"],
+          "tags": ["atlas_poi=yes", "name="],
           "description": { 
             "en": "Add a new point of interest to the map",
             "gd": "Cuir puing ùidh ùr ris a' mhapa"
-          }
+          },
+          "snapToLayer": [],
+          "maxSnapDistance": 0
         }
       ]
     }
