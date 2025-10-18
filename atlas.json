@@ -12,20 +12,19 @@
       "tagRenderings": [
         {
           "id": "name",
-          "question": { "en": "What is the name of this place?" },
+          "question": { "en": "What is the name?" },
           "freeform": { "key": "name" },
-          "render": { "en": "<h3>{name}</h3>" }
+          "render": { "en": "Name: {name}" }
         },
         {
-          "builtin": "images",
-          "id": "photos"
+          "builtin": "images"
         }
       ],
       "presets": [
         {
-          "title": { "en": "Add Point of Interest" },
+          "title": { "en": "Add POI" },
           "tags": ["atlas_poi=yes"],
-          "description": { "en": "Create a new point of interest" }
+          "description": { "en": "Add a point of interest" }
         }
       ]
     }
