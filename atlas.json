@@ -3,23 +3,45 @@
   "title": { "en": "Atlas Points of Interest" },
   "description": { "en": "Add points of interest to the map" },
   "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
-  
+
   "layers": [
     {
       "id": "poi",
       "name": { "en": "Points of Interest" },
-      "source": { "osmTags": "atlas_poi=yes" },
+      "source": { "osmTags": "atlas_poi=yes", "geometry": "point" },
+      "title": { "en": "{name}" },
+      "allowAdd": true,
+      "allowMove": true,
+
+      "pointRendering": [
+        {
+          "location": ["point"],
+          "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
+          "iconSize": "40,40",
+          "anchor": "center",
+          "label": "{name}"
+        }
+      ],
+      "lineRendering": [
+        { "color": "#00000000", "width": 0 }
+      ],
+      "areaRendering": [
+        { "fillColor": "#00000000", "strokeColor": "#00000000", "strokeWidth": 0 }
+      ],
+
       "tagRenderings": [
         {
-          "id": "name",
+          "id": "poi-name",
           "question": { "en": "What is the name?" },
           "freeform": { "key": "name" },
           "render": { "en": "Name: {name}" }
         },
         {
+          "id": "poi-images",
           "builtin": "images"
         }
       ],
+
       "presets": [
         {
           "title": { "en": "Add POI" },
