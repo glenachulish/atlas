@@ -12,7 +12,7 @@
     "en": "👋 Tap + to add a point of interest. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>Need help?</a>",
     "gd": "👋 Thoir gnogag air + gus puing ùidh a chur ris. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>A bheil feum air taic?</a>"
   },
-  "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
+  "icon": "https://glenachulish.github.io/atlas/icons/person-tree.svg",
   "startWithLayer": "poi",
   "enableMoreQuests": true,
   "enableAddNewPoints": true,
@@ -45,18 +45,10 @@
       "pointRendering": [
         {
           "location": ["point"],
-          "icon": "{_first_image_thumbnail}",
-          "iconSize": "40,40",
+          "icon": "https://glenachulish.github.io/atlas/icons/person-tree.svg",
+          "iconSize": "32,32",
           "anchor": "center",
           "label": "{name}"
-        },
-        {
-          "location": ["point"],
-          "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
-          "iconSize": "40,40",
-          "anchor": "center",
-          "label": "{name}",
-          "condition": "_first_image_thumbnail="
         }
       ],
       "lineRendering": [
@@ -119,52 +111,22 @@
           "builtin": "images"
         },
         {
-          "id": "wikimedia-commons-1",
+          "id": "wikimedia-commons-simple",
           "question": {
-            "en": "Add first Wikimedia Commons image",
-            "gd": "Cuir a' chiad dealbh Wikimedia Commons ris"
+            "en": "Add Wikimedia Commons image names",
+            "gd": "Cuir ainmean deilbh Wikimedia Commons ris"
           },
           "freeform": {
-            "key": "wikimedia_commons_1"
+            "key": "wikimedia_commons"
           },
           "render": {
-            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 1:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_1}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_1}</div>",
-            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 1:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_1}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_1}</div>"
+            "en": "<strong>Wikimedia Commons Images:</strong> {wikimedia_commons}",
+            "gd": "<strong>Dealbhan Wikimedia Commons:</strong> {wikimedia_commons}"
           },
           "questionHint": {
-            "en": "Enter Wikimedia Commons file name like 'File:Example.jpg'",
-            "gd": "Cuir a-steach ainm faidhle Wikimedia Commons leithid 'File:Example.jpg'"
+            "en": "Enter file names like 'File:Example.jpg'. For multiple images, separate with commas.",
+            "gd": "Cuir a-steach ainmean faidhle leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan."
           }
-        },
-        {
-          "id": "wikimedia-commons-2",
-          "question": {
-            "en": "Add second Wikimedia Commons image",
-            "gd": "Cuir an dàrna dealbh Wikimedia Commons ris"
-          },
-          "freeform": {
-            "key": "wikimedia_commons_2"
-          },
-          "render": {
-            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 2:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_2}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_2}</div>",
-            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 2:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_2}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_2}</div>"
-          },
-          "condition": "wikimedia_commons_1~*"
-        },
-        {
-          "id": "wikimedia-commons-3",
-          "question": {
-            "en": "Add third Wikimedia Commons image",
-            "gd": "Cuir an treas dealbh Wikimedia Commons ris"
-          },
-          "freeform": {
-            "key": "wikimedia_commons_3"
-          },
-          "render": {
-            "en": "<div style='margin: 10px 0;'><strong>Wikimedia Commons Image 3:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_3}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_3}</div>",
-            "gd": "<div style='margin: 10px 0;'><strong>Dealbh Wikimedia Commons 3:</strong><br/><img src='https://commons.wikimedia.org/wiki/Special:FilePath/{wikimedia_commons_3}?width=200' style='max-width: 100%; height: auto;' onerror='this.style.display=\"none\"'><br/>{wikimedia_commons_3}</div>"
-          },
-          "condition": "wikimedia_commons_2~*"
         },
         {
           "id": "external-links-header",
