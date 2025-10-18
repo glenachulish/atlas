@@ -82,20 +82,36 @@
         {
           "id": "poi-description",
           "question": { 
-            "en": "Add a description",
-            "gd": "Cuir tuairisgeul ris"
+            "en": "Add a short description",
+            "gd": "Cuir tuairisgeul goirid ris"
           },
           "freeform": { 
             "key": "description",
             "type": "text"
           },
           "questionHint": {
-            "en": "You can write a description of this location, its history, significance, or any other relevant information.",
-            "gd": "Faodaidh tu tuairisgeul a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
+            "en": "You can write a short description of this location.",
+            "gd": "Faodaidh tu tuairisgeul goirid a sgrìobhadh a' toirt cunntas air an àite seo."
           },
           "render": { 
             "en": "<strong>Description:</strong><br/>{description}",
             "gd": "<strong>Tuairisgeul:</strong><br/>{description}"
+          }
+        },
+        {
+          "id": "long-description-url",
+          "question": { 
+            "en": "Add full description page URL",
+            "gd": "Cuir URL duilleag tuairisgeul iomlan ris"
+          },
+          "freeform": { "key": "long_description_url" },
+          "render": { 
+            "en": "<strong>Full description:</strong> <a href='{long_description_url}' target='_blank' rel='noopener'>Open full description</a>",
+            "gd": "<strong>Tuairisgeul iomlan:</strong> <a href='{long_description_url}' target='_blank' rel='noopener'>Fosgail an tuairisgeul iomlan</a>"
+          },
+          "questionHint": {
+            "en": "Enter a URL to a page with detailed information about this location.",
+            "gd": "Cuir a-steach URL gu duilleag le fiosrachadh mionaideach mun àite seo."
           }
         },
         {
@@ -112,12 +128,19 @@
             "key": "wikimedia_commons"
           },
           "render": {
-            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
-            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
+            "en": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Wikimedia Commons Images:</strong><br/>Use format: File:Example.jpg, File:Photo.png<br/>Find images at: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}",
+            "gd": "<div style='border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; background: #f9f9f9;'><strong>Dealbhan Wikimedia Commons:</strong><br/>Cleachd cruth: File:Example.jpg, File:Photo.png<br/>Lorg dealbhan aig: <a href='https://commons.wikimedia.org' target='_blank'>commons.wikimedia.org</a></div>{wikimedia_commons}"
           },
           "questionHint": {
             "en": "Enter Wikimedia Commons file names like 'File:Example.jpg'. For multiple images, separate with commas.",
             "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan."
+          }
+        },
+        {
+          "id": "external-links-header",
+          "render": {
+            "en": "<h4>External Links</h4>",
+            "gd": "<h4>Ceanglaichean taobh a-muigh</h4>"
           }
         },
         {
