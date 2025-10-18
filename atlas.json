@@ -93,37 +93,59 @@
         {
           "builtin": "images",
           "override": {
-            "id": "poi-photo",
-            "question": {
-              "en": "Add photos",
-              "gd": "Cuir dealbhan ris"
-            }
+            "id": "poi-photo"
+          }
+        },
+        {
+          "id": "poi-image-urls",
+          "question": {
+            "en": "Add image URLs from websites (comma-separated for multiple)",
+            "gd": "Cuir URLaichean deilbh ris o làraichean-lìn (sgaraichte le cromagan airson iomadh fear)"
+          },
+          "freeform": {
+            "key": "image:url"
+          },
+          "render": {
+            "en": "<strong>Image URLs:</strong> {image:url}",
+            "gd": "<strong>URLaichean Deilbh:</strong> {image:url}"
+          },
+          "questionHint": {
+            "en": "Enter full image URLs (e.g., https://example.com/image.jpg). For multiple images, separate with commas.",
+            "gd": "Cuir a-steach URLaichean deilbh slàn (m.e., https://example.com/image.jpg). Airson iomadh dealbh, sgaraich le cromagan."
           }
         },
         {
           "id": "poi-wikimedia",
           "question": {
-            "en": "Search Wikimedia Commons for images",
-            "gd": "Lorg dealbhan air Wikimedia Commons"
+            "en": "Add Wikimedia Commons image names (comma-separated for multiple)",
+            "gd": "Cuir ainmean deilbh Wikimedia Commons ris (sgaraichte le cromagan)"
           },
           "freeform": {
             "key": "wikimedia_commons"
           },
           "render": {
-            "en": "<strong>Wikimedia:</strong> {wikimedia_commons}",
-            "gd": "<strong>Wikimedia:</strong> {wikimedia_commons}"
+            "en": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}",
+            "gd": "<strong>Wikimedia Commons:</strong> {wikimedia_commons}"
+          },
+          "questionHint": {
+            "en": "Enter Wikimedia Commons file names (e.g., File:Example.jpg). For multiple images, separate with commas.",
+            "gd": "Cuir a-steach ainmean faidhle Wikimedia Commons (m.e., File:Example.jpg). Airson iomadh dealbh, sgaraich le cromagan."
           }
         },
         {
           "id": "poi-url",
           "question": { 
-            "en": "Add a website URL",
-            "gd": "Cuir URL làrach-lìn ris"
+            "en": "Add website URLs (comma-separated for multiple)",
+            "gd": "Cuir URLaichean làraich-lìn ris (sgaraichte le cromagan)"
           },
           "freeform": { "key": "website" },
           "render": { 
-            "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>",
-            "gd": "<strong>Làrach-lìn:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>"
+            "en": "<strong>Websites:</strong> {website}",
+            "gd": "<strong>Làraichean-lìn:</strong> {website}"
+          },
+          "questionHint": {
+            "en": "Enter website URLs (e.g., https://example.com). For multiple websites, separate with commas or semicolons.",
+            "gd": "Cuir a-steach URLaichean làraich-lìn (m.e., https://example.com). Airson iomadh làrach-lìn, sgaraich le cromagan no leth-cholanan."
           }
         },
         {
