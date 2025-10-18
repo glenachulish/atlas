@@ -70,26 +70,48 @@
         {
           "id": "poi-description",
           "question": { 
-            "en": "Add a short description",
-            "gd": "Cuir tuairisgeul goirid ris"
+            "en": "Add a description (up to 1000 words)",
+            "gd": "Cuir tuairisgeul ris (suas ri 1000 facal)"
           },
           "freeform": { 
             "key": "description",
             "type": "text",
-            "placeholder": {
-              "en": "Describe this place (up to 1000 words)",
-              "gd": "Thoir cunntas air an àite seo (suas ri 1000 facal)"
+            "textfieldQuestion": {
+              "en": "Description",
+              "gd": "Tuairisgeul"
             }
           },
+          "questionHint": {
+            "en": "You can write up to 1000 words describing this location, its history, significance, or any other relevant information.",
+            "gd": "Faodaidh tu suas ri 1000 facal a sgrìobhadh a' toirt cunntas air an àite seo, an eachdraidh, an cudromachd, no fiosrachadh sam bith eile a tha buntainneach."
+          },
           "render": { 
-            "en": "<strong>Description:</strong> {description}",
-            "gd": "<strong>Tuairisgeul:</strong> {description}"
+            "en": "<strong>Description:</strong><br/>{description}",
+            "gd": "<strong>Tuairisgeul:</strong><br/>{description}"
           }
         },
         {
           "builtin": "images",
           "override": {
-            "id": "poi-photo"
+            "id": "poi-photo",
+            "question": {
+              "en": "Add photos",
+              "gd": "Cuir dealbhan ris"
+            }
+          }
+        },
+        {
+          "id": "poi-wikimedia",
+          "question": {
+            "en": "Search Wikimedia Commons for images",
+            "gd": "Lorg dealbhan air Wikimedia Commons"
+          },
+          "freeform": {
+            "key": "wikimedia_commons"
+          },
+          "render": {
+            "en": "<strong>Wikimedia:</strong> {wikimedia_commons}",
+            "gd": "<strong>Wikimedia:</strong> {wikimedia_commons}"
           }
         },
         {
