@@ -111,21 +111,45 @@
           "builtin": "images"
         },
         {
-          "id": "wikimedia-commons-simple",
+          "id": "wikimedia-1",
           "question": {
-            "en": "Add Wikimedia Commons image names",
-            "gd": "Cuir ainmean deilbh Wikimedia Commons ris"
+            "en": "Add first Wikimedia Commons image",
+            "gd": "Cuir a' chiad dealbh Wikimedia Commons ris"
           },
           "freeform": {
-            "key": "wikimedia_commons"
+            "key": "wikimedia_1"
           },
           "render": {
-            "en": "<strong>Wikimedia Commons Images:</strong> {wikimedia_commons}",
-            "gd": "<strong>Dealbhan Wikimedia Commons:</strong> {wikimedia_commons}"
+            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 1:</strong> {wikimedia_1}</div>",
+            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 1:</strong> {wikimedia_1}</div>"
+          }
+        },
+        {
+          "id": "wikimedia-2",
+          "question": {
+            "en": "Add second Wikimedia Commons image",
+            "gd": "Cuir an dàrna dealbh Wikimedia Commons ris"
           },
-          "questionHint": {
-            "en": "Enter file names like 'File:Example.jpg'. For multiple images, separate with commas.",
-            "gd": "Cuir a-steach ainmean faidhle leithid 'File:Example.jpg'. Airson iomadh dealbh, sgaraich le cromagan."
+          "freeform": {
+            "key": "wikimedia_2"
+          },
+          "render": {
+            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 2:</strong> {wikimedia_2}</div>",
+            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 2:</strong> {wikimedia_2}</div>"
+          }
+        },
+        {
+          "id": "wikimedia-3",
+          "question": {
+            "en": "Add third Wikimedia Commons image",
+            "gd": "Cuir an treas dealbh Wikimedia Commons ris"
+          },
+          "freeform": {
+            "key": "wikimedia_3"
+          },
+          "render": {
+            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 3:</strong> {wikimedia_3}</div>",
+            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 3:</strong> {wikimedia_3}</div>"
           }
         },
         {
@@ -145,10 +169,6 @@
           "render": { 
             "en": "<strong>Website:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>",
             "gd": "<strong>Làrach-lìn:</strong> <a href='{website}' target='_blank' rel='noopener'>{website}</a>"
-          },
-          "questionHint": {
-            "en": "Enter a website URL (e.g., https://example.com)",
-            "gd": "Cuir a-steach URL làrach-lìn (m.e., https://example.com)"
           }
         },
         {
@@ -161,8 +181,7 @@
           "render": { 
             "en": "<strong>Website 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>",
             "gd": "<strong>Làrach-lìn 2:</strong> <a href='{contact:website}' target='_blank' rel='noopener'>{contact:website}</a>"
-          },
-          "condition": "website~*"
+          }
         },
         {
           "id": "poi-url-3",
@@ -174,34 +193,7 @@
           "render": { 
             "en": "<strong>Website 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>",
             "gd": "<strong>Làrach-lìn 3:</strong> <a href='{url}' target='_blank' rel='noopener'>{url}</a>"
-          },
-          "condition": "contact:website~*"
-        },
-        {
-          "id": "poi-url-4",
-          "question": { 
-            "en": "Add another website URL",
-            "gd": "Cuir URL làrach-lìn eile ris"
-          },
-          "freeform": { "key": "source:url" },
-          "render": { 
-            "en": "<strong>Website 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>",
-            "gd": "<strong>Làrach-lìn 4:</strong> <a href='{source:url}' target='_blank' rel='noopener'>{source:url}</a>"
-          },
-          "condition": "url~*"
-        },
-        {
-          "id": "poi-url-5",
-          "question": { 
-            "en": "Add another website URL",
-            "gd": "Cuir URL làrach-lìn eile ris"
-          },
-          "freeform": { "key": "ref:url" },
-          "render": { 
-            "en": "<strong>Website 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>",
-            "gd": "<strong>Làrach-lìn 5:</strong> <a href='{ref:url}' target='_blank' rel='noopener'>{ref:url}</a>"
-          },
-          "condition": "source:url~*"
+          }
         },
         {
           "id": "poi-tags",
