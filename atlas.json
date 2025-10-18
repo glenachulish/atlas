@@ -75,11 +75,7 @@
           },
           "freeform": { 
             "key": "description",
-            "type": "text",
-            "textfieldQuestion": {
-              "en": "Description",
-              "gd": "Tuairisgeul"
-            }
+            "type": "text"
           },
           "questionHint": {
             "en": "You can write up to 1000 words describing this location, its history, significance, or any other relevant information.",
@@ -91,27 +87,20 @@
           }
         },
         {
-          "builtin": "images",
-          "override": {
-            "id": "poi-photo",
-            "render": {
-              "en": "{image_carousel()}{image_upload()}",
-              "gd": "{image_carousel()}{image_upload()}"
-            }
-          }
+          "builtin": "images"
         },
         {
-          "id": "poi-image-urls",
+          "id": "poi-image-url-1",
           "question": {
             "en": "Add photo from website (paste image URL)",
             "gd": "Cuir dealbh ris o làrach-lìn (cuir URL an deilbh)"
           },
           "freeform": {
-            "key": "image:0"
+            "key": "image_url_1"
           },
           "render": {
-            "en": "<img src='{image:0}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image:0}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+            "en": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
           },
           "questionHint": {
             "en": "To add a photo from a website: 1) Right-click the image and select 'Copy image address' or 'Copy image link', 2) Paste the URL here (must end in .jpg, .png, or .gif). Example: https://example.com/photo.jpg",
@@ -119,34 +108,34 @@
           }
         },
         {
-          "id": "poi-image-urls-2",
+          "id": "poi-image-url-2",
           "question": {
             "en": "Add another image URL",
             "gd": "Cuir URL deilbh eile ris"
           },
           "freeform": {
-            "key": "image:1"
+            "key": "image_url_2"
           },
           "render": {
-            "en": "<img src='{image:1}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image:1}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+            "en": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
           },
-          "condition": "image:0~*"
+          "condition": "image_url_1~*"
         },
         {
-          "id": "poi-image-urls-3",
+          "id": "poi-image-url-3",
           "question": {
             "en": "Add another image URL",
             "gd": "Cuir URL deilbh eile ris"
           },
           "freeform": {
-            "key": "image:2"
+            "key": "image_url_3"
           },
           "render": {
-            "en": "<img src='{image:2}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
-            "gd": "<img src='{image:2}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
+            "en": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />",
+            "gd": "<img src='{image_url_3}' style='max-width: 100%; height: auto; margin: 5px 0;' />"
           },
-          "condition": "image:1~*"
+          "condition": "image_url_2~*"
         },
         {
           "id": "poi-wikimedia",
