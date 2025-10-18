@@ -12,7 +12,7 @@
     "en": "👋 Tap + to add a point of interest. <a href='https://glenachulish.github.io/atlas/contribute_en.html' target='_blank' rel='noopener'>Need help?</a>",
     "gd": "👋 Thoir gnogag air + gus puing ùidh a chur ris. <a href='https://glenachulish.github.io/atlas/contribute_gd.html' target='_blank' rel='noopener'>A bheil feum air taic?</a>"
   },
-  "icon": "https://glenachulish.github.io/atlas/icons/person-tree.svg",
+  "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
   "startWithLayer": "poi",
   "enableMoreQuests": true,
   "enableAddNewPoints": true,
@@ -45,7 +45,7 @@
       "pointRendering": [
         {
           "location": ["point"],
-          "icon": "https://glenachulish.github.io/atlas/icons/person-tree.svg",
+          "icon": "https://glenachulish.github.io/atlas/icons/person-planet.svg",
           "iconSize": "32,32",
           "anchor": "center",
           "label": "{name}"
@@ -81,10 +81,6 @@
             "key": "description",
             "type": "text"
           },
-          "questionHint": {
-            "en": "You can write a short description of this location.",
-            "gd": "Faodaidh tu tuairisgeul goirid a sgrìobhadh a' toirt cunntas air an àite seo."
-          },
           "render": { 
             "en": "<strong>Description:</strong><br/>{description}",
             "gd": "<strong>Tuairisgeul:</strong><br/>{description}"
@@ -100,15 +96,18 @@
           "render": { 
             "en": "<strong>Full description:</strong> <a href='{long_description_url}' target='_blank' rel='noopener'>Open full description</a>",
             "gd": "<strong>Tuairisgeul iomlan:</strong> <a href='{long_description_url}' target='_blank' rel='noopener'>Fosgail an tuairisgeul iomlan</a>"
-          },
-          "questionHint": {
-            "en": "Enter a URL to a page with detailed information about this location.",
-            "gd": "Cuir a-steach URL gu duilleag le fiosrachadh mionaideach mun àite seo."
           }
         },
         {
           "id": "poi-images",
           "builtin": "images"
+        },
+        {
+          "id": "wikimedia-header",
+          "render": {
+            "en": "<h4>Wikimedia Commons Images</h4><p>Add Wikimedia Commons file names (e.g., File:Example.jpg)</p>",
+            "gd": "<h4>Dealbhan Wikimedia Commons</h4><p>Cuir ainmean faidhle Wikimedia Commons ris (m.e., File:Example.jpg)</p>"
+          }
         },
         {
           "id": "wikimedia-1",
@@ -120,8 +119,8 @@
             "key": "wikimedia_1"
           },
           "render": {
-            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 1:</strong> {wikimedia_1}</div>",
-            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 1:</strong> {wikimedia_1}</div>"
+            "en": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Wikimedia Image 1:</strong> {wikimedia_1}</div>",
+            "gd": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Dealbh Wikimedia 1:</strong> {wikimedia_1}</div>"
           }
         },
         {
@@ -134,8 +133,8 @@
             "key": "wikimedia_2"
           },
           "render": {
-            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 2:</strong> {wikimedia_2}</div>",
-            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 2:</strong> {wikimedia_2}</div>"
+            "en": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Wikimedia Image 2:</strong> {wikimedia_2}</div>",
+            "gd": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Dealbh Wikimedia 2:</strong> {wikimedia_2}</div>"
           }
         },
         {
@@ -148,8 +147,8 @@
             "key": "wikimedia_3"
           },
           "render": {
-            "en": "<div style='margin: 5px 0;'><strong>Wikimedia Image 3:</strong> {wikimedia_3}</div>",
-            "gd": "<div style='margin: 5px 0;'><strong>Dealbh Wikimedia 3:</strong> {wikimedia_3}</div>"
+            "en": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Wikimedia Image 3:</strong> {wikimedia_3}</div>",
+            "gd": "<div style='margin: 10px 0; padding: 10px; background: #f0f8ff; border-radius: 5px;'><strong>Dealbh Wikimedia 3:</strong> {wikimedia_3}</div>"
           }
         },
         {
