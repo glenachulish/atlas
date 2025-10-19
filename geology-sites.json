@@ -1,0 +1,668 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unst, Shetland",
+        "description": "Ancient ocean floor rocks - the oldest ophiolite complex in the British Isles",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/unst-shetland/",
+        "geology_period": "In the beginning..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.9, 60.75]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eshaness Coast, Shetland",
+        "description": "A blast from the past - spectacular volcanic cliffs showing explosive eruptions",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/eshaness-coast/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.65, 60.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St Ninian's Tombolo, Shetland",
+        "description": "Arcs of sand and shells connecting St Ninian's Isle to mainland Shetland",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/st-ninians-tombolo/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.35, 59.98]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Heart of Neolithic Orkney",
+        "description": "Geological and human history entwined at Skara Brae and Maeshowe",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/heart-of-neolithic-orkney/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.2, 59.05]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North-West Hoy, Orkney",
+        "description": "Old Red Sandstone coastal scenery with dramatic sea cliffs including the Old Man of Hoy",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/north-west-hoy/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.35, 58.88]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Achanarras Quarry",
+        "description": "Where ancient fish shoals lie - famous Middle Devonian fish fossil site",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/achanarras-quarry/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.55, 58.35]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smoo Cave to Am Fairald",
+        "description": "Sandy beaches, caves and rock formations along the dramatic north coast",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/smoo-cave/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.72, 58.57]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scourie Bay and Laxford",
+        "description": "Oldest Rocks in Western Europe - Lewisian gneiss showing complex geological history",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/scourie-bay/",
+        "geology_period": "In the beginning..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.15, 58.35]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Loch Glencoul",
+        "description": "Continental collisions laid bare - spectacular thrust geology visible from the loch",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/loch-glencoul/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.95, 58.22]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Knockan Crag",
+        "description": "Scotland's most significant fault line showing the Moine Thrust zone",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/knockan-crag/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.1167, 57.9167]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luskentyre, Harris",
+        "description": "Breath-taking coastal landforms with stunning white sand beaches against Lewisian gneiss",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/luskentyre/",
+        "geology_period": "In the beginning..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.95, 57.9]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trotternish, Skye",
+        "description": "Summit to sea since the Jurassic - famous landslides and dinosaur footprints",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/trotternish/",
+        "geology_period": "Opening of the North Atlantic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.25, 57.65]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beinn Eighe and Loch Maree",
+        "description": "Thrust chaos and glaciation in Torridonian sandstone landscapes",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/beinn-eighe/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.45, 57.6]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Corrieshalloch Gorge",
+        "description": "The carving force of glacial meltwater creating a dramatic box canyon",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/corrieshalloch-gorge/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.0, 57.75]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Black Isle & Hugh Miller Museum",
+        "description": "Sandstones rich in fossil finds from the Devonian period",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/black-isle/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.25, 57.6]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laich Sandstones, Elgin",
+        "description": "A world of extinct herbivores, reptiles and fish in Triassic sandstones",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/laich-sandstones/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.32, 57.65]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spey Bay",
+        "description": "The sea of stones - spectacular shingle beach system",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/spey-bay/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.08, 57.67]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portsoy",
+        "description": "Beautiful pebbles and tortured rocks showing complex metamorphic history",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/portsoy/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.68, 57.68]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cuillin Hills, Skye",
+        "description": "Mountains of fire and ice - dramatic gabbro peaks shaped by glaciers",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/cuillin-hills/",
+        "geology_period": "Opening of the North Atlantic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.25, 57.22]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eigg",
+        "description": "Jurassic reptiles and volcanic glass including the famous Sgùrr of Eigg",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/eigg/",
+        "geology_period": "Opening of the North Atlantic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.17, 56.9]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Loch Monar",
+        "description": "Rocks of ancient Caledonian mountains showing complex folding",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/loch-monar/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.25, 57.42]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falls of Foyers, Great Glen",
+        "description": "The smoking falls cutting through metamorphic rocks of the Great Glen Fault",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/falls-of-foyers/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.53, 57.25]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Staffa",
+        "description": "Nature's organ pipes - famous columnar basalt formations including Fingal's Cave",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/staffa/",
+        "geology_period": "Opening of the North Atlantic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.33, 56.43]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Iona",
+        "description": "Contrast in rock, color and light with Lewisian gneiss and white sand beaches",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/iona/",
+        "geology_period": "In the beginning..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.42, 56.33]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luing and the Atlantic Islands",
+        "description": "A tale of two oceans showing evidence of ancient ocean closure",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/luing/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.65, 56.23]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glen Coe",
+        "description": "Scene of an ancient caldera collapse and dramatic volcanic landscape",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/glen-coe/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.08, 56.67]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parallel Roads of Glen Roy",
+        "description": "Unlocking the lines in the landscape - ancient lake shorelines from ice age",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/glen-roy/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.83, 56.95]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schiehallion",
+        "description": "The mountain that weighed the Earth - used in 1774 gravity experiment",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/schiehallion/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.1, 56.67]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "River Feshie",
+        "description": "How modern-day landscapes are formed - active river processes and sediment transport",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/river-feshie/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.92, 57.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cairngorms",
+        "description": "A subarctic landscape carved out of granite with dramatic glacial features",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/cairngorms/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.67, 57.08]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burn o' Vat, Dinnet",
+        "description": "Step inside a granite cauldron - spectacular pothole formed by glacial meltwater",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/burn-o-vat/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.95, 57.08]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Corrie Fee, Glen Clova",
+        "description": "A gem from the last glaciation - spectacular corrie with dramatic cliffs",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/corrie-fee/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.12, 56.88]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stonehaven",
+        "description": "The power of colliding continents visible in dramatic cliff sections",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/stonehaven/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.22, 56.97]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St Cyrus Beach",
+        "description": "A story of fire and water with volcanic cliffs and sandy beach",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/st-cyrus-beach/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.42, 56.77]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seaton Cliffs",
+        "description": "Sandstone sculpted by the sea creating dramatic coastal geomorphology",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/seaton-cliffs/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.53, 56.57]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Balmaha",
+        "description": "Walk the Highland Boundary Fault marking the division of Highlands and Lowlands",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/balmaha/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.53, 56.08]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flanders Moss NNR",
+        "description": "Colorful 'shaking' bogs - one of Britain's largest raised peat bogs",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/flanders-moss/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.33, 56.12]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Callander",
+        "description": "Ancient rivers and glaciers shaping the landscape at the Highland Boundary",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/callander/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.22, 56.25]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East Neuk of Fife",
+        "description": "Folds, fire and fossils in Carboniferous rocks along the Fife coast",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/east-neuk/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.75, 56.22]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Islay",
+        "description": "Evidence for 'Snowball Earth' in ancient glacial deposits",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/islay/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.25, 55.78]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arran",
+        "description": "Scotland's geology in one place - a microcosm of Scottish geological history",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/arran/",
+        "geology_period": "Opening of the North Atlantic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.25, 55.58]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fossil Grove",
+        "description": "An ancient forest tale - in-situ fossil trees from the Carboniferous period",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/fossil-grove/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.35, 55.87]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falls of Clyde",
+        "description": "Glacial rivers shape the landscape with dramatic waterfalls and gorges",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/falls-of-clyde/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.83, 55.67]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Holyrood Park",
+        "description": "The volcano in Scotland's capital - Arthur's Seat and Salisbury Crags",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/holyrood-park/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.17, 55.95]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dunbar and Barns Ness",
+        "description": "Ancient seascape and volcanic hellhole showing Carboniferous volcanism",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/dunbar/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.52, 56.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Siccar Point",
+        "description": "James Hutton's 'abyss of time' where he demonstrated deep geological time",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/siccar-point/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.3, 55.93]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ballantrae",
+        "description": "A rare relic of an ancient ocean - ophiolite complex on the Ayrshire coast",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/ballantrae/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.0, 55.1]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Loch Skeen and Grey Mare's Tail",
+        "description": "Ice Age landforms and the 'roaring limn' - dramatic waterfall and corrie",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/loch-skeen/",
+        "geology_period": "And finally..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.33, 55.42]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eildon Hills",
+        "description": "The Borders' volcanic past - ancient volcanic vents in the Scottish Borders",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/eildon-hills/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.72, 55.58]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Back Bay, Monreith",
+        "description": "Twisted rocks of a long-lost ocean floor showing complex deformation",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/back-bay/",
+        "geology_period": "Caledonian Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.58, 54.73]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Southerness",
+        "description": "Solway's ancient and modern shorelines showing coastal evolution",
+        "website": "https://www.scottishgeologytrust.org/geology/51-best-places/southerness/",
+        "geology_period": "After the Orogeny"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.58, 54.87]
+      }
+    }
+  ]
+}
