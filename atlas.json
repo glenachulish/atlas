@@ -23,6 +23,7 @@
   "enableShareScreen": true,
   "enableMorePrivacy": false,
 
+  
   "backgroundLayers": [
     {
       "id": "osm-default",
